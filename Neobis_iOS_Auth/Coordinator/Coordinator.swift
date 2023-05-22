@@ -13,5 +13,4 @@ protocol Coordinator {
     var navigationController : BaseNavigationController { get set }
 
     func start()
-    func pop()
 }

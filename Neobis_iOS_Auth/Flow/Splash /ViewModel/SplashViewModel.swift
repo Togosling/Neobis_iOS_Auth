@@ -16,10 +16,10 @@ class SplashViewModel: SplashViewModelType {
     var coordinator = SplashCoordinator(navigationController: BaseNavigationController.init())
     
     func gotoRegister() {
-        
+        coordinator.gotoRegister()
     }
     
     func gotoLogin() {
-        
+        coordinator.gotoLogin()
     }
 }

@@ -19,6 +19,11 @@
 		F0DC65AA2A1B95D500341C08 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65A92A1B95D500341C08 /* SplashView.swift */; };
 		F0DC65AD2A1B992700341C08 /* Gotham Pro Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DC65AC2A1B992700341C08 /* Gotham Pro Medium.ttf */; };
 		F0DC65AF2A1B9BE900341C08 /* Gotham Pro Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DC65AE2A1B9BE900341C08 /* Gotham Pro Black.ttf */; };
+		F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65B52A1BA2A400341C08 /* LoginCoordinator.swift */; };
+		F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65B72A1BA2E600341C08 /* LoginViewModel.swift */; };
+		F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65BB2A1BA33200341C08 /* LoginViewController.swift */; };
+		F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65BD2A1BA46E00341C08 /* LoginView.swift */; };
+		F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */; };
 		F0E3C3F62A1B52D10084C651 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E3C3F52A1B52D10084C651 /* AppDelegate.swift */; };
 		F0E3C3FD2A1B52D10084C651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E3C3FB2A1B52D10084C651 /* Main.storyboard */; };
 		F0E3C3FF2A1B52D20084C651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E3C3FE2A1B52D20084C651 /* Assets.xcassets */; };
@@ -40,6 +45,11 @@
 		F0DC65A92A1B95D500341C08 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		F0DC65AC2A1B992700341C08 /* Gotham Pro Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Pro Medium.ttf"; sourceTree = "<group>"; };
 		F0DC65AE2A1B9BE900341C08 /* Gotham Pro Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Pro Black.ttf"; sourceTree = "<group>"; };
+		F0DC65B52A1BA2A400341C08 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		F0DC65B72A1BA2E600341C08 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F0DC65BB2A1BA33200341C08 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F0DC65BD2A1BA46E00341C08 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F0E3C3F22A1B52D10084C651 /* Neobis_iOS_Auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_Auth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E3C3F52A1B52D10084C651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E3C3FC2A1B52D10084C651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +126,7 @@
 			children = (
 				F0DC65972A1B92C900341C08 /* FlexibleHeightWidth.swift */,
 				F0DC659A2A1B92E800341C08 /* Bindable.swift */,
+				F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -198,8 +209,52 @@
 		F0DC65B12A1BA0F400341C08 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F0DC65B22A1BA28400341C08 /* Coordinator */,
+				F0DC65B42A1BA29500341C08 /* ViewModel */,
+				F0DC65B32A1BA28E00341C08 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		F0DC65B22A1BA28400341C08 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0DC65B52A1BA2A400341C08 /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F0DC65B32A1BA28E00341C08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0DC65B92A1BA31B00341C08 /* Controller */,
+				F0DC65BA2A1BA32300341C08 /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0DC65B42A1BA29500341C08 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0DC65B72A1BA2E600341C08 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0DC65B92A1BA31B00341C08 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0DC65BB2A1BA33200341C08 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0DC65BA2A1BA32300341C08 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				F0DC65BD2A1BA46E00341C08 /* LoginView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		F0E3C3E92A1B52D10084C651 = {
@@ -359,12 +414,17 @@
 				F0DC65982A1B92C900341C08 /* FlexibleHeightWidth.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
+				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
+				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
+				F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */,
 				F0DC65AA2A1B95D500341C08 /* SplashView.swift in Sources */,
 				F0E3C3F62A1B52D10084C651 /* AppDelegate.swift in Sources */,
+				F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */,
 				F0DC65A62A1B945F00341C08 /* SplashViewModel.swift in Sources */,
+				F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

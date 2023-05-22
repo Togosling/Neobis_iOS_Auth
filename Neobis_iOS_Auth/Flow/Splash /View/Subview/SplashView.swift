@@ -9,13 +9,13 @@ import UIKit
 
 class SplashView: UIView {
     
-    let mainImageView: UIImageView = {
+    let logoImageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named: "smile")
         return iv
     }()
     
-    let mainLabel: UILabel = {
+    let logoLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
         label.font = UIFont(name: "GothamPro-Medium", size: 40)
@@ -55,26 +55,26 @@ class SplashView: UIView {
     }
     
     fileprivate func setupViews() {
-        addSubview(mainImageView)
-        addSubview(mainLabel)
+        addSubview(logoImageView)
+        addSubview(logoLabel)
         addSubview(beginButton)
         addSubview(loginButton)
     }
     
     fileprivate func setupConstraints() {
-        mainImageView.snp.makeConstraints { make in
+        logoImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(flexibleHeight(to: 154))
             make.width.equalTo(flexibleWidth(to: 200))
             make.height.equalTo(flexibleHeight(to: 200))
             make.centerX.equalToSuperview()
         }
-        mainLabel.snp.makeConstraints { make in
-            make.top.equalTo(mainImageView.snp.bottom).offset(flexibleHeight(to: 60))
+        logoLabel.snp.makeConstraints { make in
+            make.top.equalTo(logoImageView.snp.bottom).offset(flexibleHeight(to: 60))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.trailing.equalToSuperview().offset(flexibleWidth(to: -20))
         }
         beginButton.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel.snp.bottom).offset(flexibleHeight(to: 60))
+            make.top.equalTo(logoLabel.snp.bottom).offset(flexibleHeight(to: 60))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.trailing.equalToSuperview().offset(flexibleWidth(to: -20))
             make.height.equalTo(flexibleHeight(to: 65))
@@ -88,5 +88,4 @@ class SplashView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

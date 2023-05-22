@@ -20,8 +20,4 @@ class AppCoordinator: Coordinator {
         let splashCoordinator = SplashCoordinator(navigationController: navigationController)
         splashCoordinator.start()
     }
-    
-    func pop() {
-        
-    }
 }

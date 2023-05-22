@@ -22,9 +22,13 @@ class SplashCoordinator: Coordinator {
         let splashViewController = SplashViewController(splashViewModel: splashViewModel)
         navigationController.pushViewController(splashViewController, animated: false)
     }
-    
-    func pop() {
         
+    func gotoRegister() {
+
     }
     
+    func gotoLogin() {
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.start()
+    }
 }
