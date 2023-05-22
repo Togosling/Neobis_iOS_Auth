@@ -20,6 +20,6 @@ class LoginCoordinator: Coordinator {
         let loginViewModel = LoginViewModel.init()
         loginViewModel.coordinator = self
         let loginViewController = LoginViewController(loginViewModel: loginViewModel)
-        navigationController.pushViewController(loginViewController, animated: false)
+        navigationController.pushViewController(loginViewController, animated: true)
     }
 }

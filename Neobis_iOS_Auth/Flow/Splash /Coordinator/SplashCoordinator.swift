@@ -20,7 +20,7 @@ class SplashCoordinator: Coordinator {
         let splashViewModel = SplashViewModel.init()
         splashViewModel.coordinator = self
         let splashViewController = SplashViewController(splashViewModel: splashViewModel)
-        navigationController.pushViewController(splashViewController, animated: false)
+        navigationController.pushViewController(splashViewController, animated: true)
     }
         
     func gotoRegister() {
