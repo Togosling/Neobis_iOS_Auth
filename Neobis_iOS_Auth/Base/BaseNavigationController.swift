@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseNavigationController.swift
 //  Neobis_iOS_Auth
 //
 //  Created by Тагай Абдылдаев on 2023/5/22.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class BaseNavigationController: UINavigationController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.navigationBar.isHidden = true
     }
-
-
 }
-
