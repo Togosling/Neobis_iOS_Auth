@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegisterViewModelType {
     func goBack()
+    func completeRegistration()
 }
 
 class RegisterViewModel: RegisterViewModelType {
@@ -17,5 +18,9 @@ class RegisterViewModel: RegisterViewModelType {
     
     func goBack() {
         coordinator.goBack()
+    }
+    
+    func completeRegistration() {
+        coordinator.completeRegistration()
     }
 }

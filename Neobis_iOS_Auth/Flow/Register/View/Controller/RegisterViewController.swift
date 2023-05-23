@@ -19,6 +19,11 @@ class RegisterViewController: BaseViewController {
     
     override func addTargets() {
         registerView.backButton.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
+        registerView.nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func handleNext() {
+        registerViewModel.completeRegistration()
     }
     
     @objc fileprivate func handleBack() {

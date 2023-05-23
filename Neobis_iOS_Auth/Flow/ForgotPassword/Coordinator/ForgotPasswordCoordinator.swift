@@ -1,5 +1,5 @@
 //
-//  RegisterCoordinator.swift
+//  ForgotPasswordCoordinator.swift
 //  Neobis_iOS_Auth
 //
 //  Created by Тагай Абдылдаев on 2023/5/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterCoordinator: Coordinator {
+class ForgotPasswordCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     var navigationController: BaseNavigationController
@@ -17,17 +17,18 @@ class RegisterCoordinator: Coordinator {
     }
     
     func start() {
-        let registerViewModel = RegisterViewModel.init()
-        registerViewModel.coordinator = self
-        let registerViewController = RegisterViewController(registerViewModel: registerViewModel)
-        navigationController.pushViewController(registerViewController, animated: true)
+        let forgotPasswordViewModel = ForgotPasswordViewModel.init()
+        forgotPasswordViewModel.coordinator = self
+        let forgotPasswordController = ForgotPasswordController(forgotPasswordViewModel: forgotPasswordViewModel)
+        navigationController.pushViewController(forgotPasswordController, animated: true)
     }
     
     func goBack() {
         navigationController.popViewController(animated: true)
     }
     
-    func completeRegistration() {
+    func completePasswordRecovery() {
         
     }
+    
 }
