@@ -23,7 +23,12 @@ class SentEmailView: BaseView {
         label.lineBreakMode = .byWordWrapping
         var paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.25
-        label.attributedText = NSMutableAttributedString(string: "На вашу почту «dojacat01.gmail.com» было отправлено письмо ", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+        let text = NSMutableAttributedString()
+        text.append(NSAttributedString(string: "На вашу почту \n", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]))
+        text.append(NSAttributedString(string: "«dojacat01.gmail.com»", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 93/255, green: 95/255, blue: 239/255, alpha: 1)]))
+        text.append(NSAttributedString(string: " было \n отправлено письмо",attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]))
+        label.attributedText = text
+        label.textAlignment = .center
         return label
     }()
     
@@ -40,6 +45,8 @@ class SentEmailView: BaseView {
     override init(frame: CGRect) {
         super .init(frame: frame)
         
+        backgroundColor = .white
+        layer.cornerRadius = 32
     }
     
     override func setupViews() {
