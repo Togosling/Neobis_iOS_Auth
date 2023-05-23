@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SplashView: UIView {
+class SplashView: BaseView {
     
     let logoImageView: UIImageView = {
         let iv = UIImageView()
@@ -49,19 +49,16 @@ class SplashView: UIView {
         super .init(frame: frame)
         
         backgroundColor = .white
-        
-        setupViews()
-        setupConstraints()
     }
     
-    fileprivate func setupViews() {
+    override func setupViews() {
         addSubview(logoImageView)
         addSubview(logoLabel)
         addSubview(beginButton)
         addSubview(loginButton)
     }
     
-    fileprivate func setupConstraints() {
+    override func setupConstraints() {
         logoImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(flexibleHeight(to: 154))
             make.width.equalTo(flexibleWidth(to: 200))

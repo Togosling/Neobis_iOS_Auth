@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterView: UIView {
+class RegisterView: BaseView {
     
     let registerLabel: UILabel = {
         let label = UILabel()
@@ -70,13 +70,11 @@ class RegisterView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .white
         
-        setupViews()
-        setupConstraints()
+        backgroundColor = .white
     }
     
-    fileprivate func setupViews() {
+    override func setupViews() {
         addSubview(registerLabel)
         addSubview(backButton)
         addSubview(logoLabel)
@@ -85,7 +83,7 @@ class RegisterView: UIView {
         addSubview(nextButton)
     }
     
-    fileprivate func setupConstraints() {
+    override func setupConstraints() {
         registerLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(flexibleHeight(to: 60))
             make.centerX.equalToSuperview()

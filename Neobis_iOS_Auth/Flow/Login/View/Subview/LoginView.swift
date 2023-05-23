@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginView: UIView {
+class LoginView: BaseView {
     
     let logoImageView: UIImageView = {
         let iv = UIImageView()
@@ -69,11 +69,9 @@ class LoginView: UIView {
             
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .white
         
+        backgroundColor = .white
         addButtontoTextField()
-        setupViews()
-        setupConstraints()
     }
     
     fileprivate func addButtontoTextField() {
@@ -81,7 +79,7 @@ class LoginView: UIView {
         passwordTextField.rightViewMode = .always
     }
     
-    fileprivate func setupViews() {
+    override func setupViews() {
         addSubview(logoImageView)
         addSubview(mailTextField)
         addSubview(passwordTextField)
@@ -89,7 +87,7 @@ class LoginView: UIView {
         addSubview(forgotPasswordButton)
     }
     
-    fileprivate func setupConstraints() {
+    override func setupConstraints() {
         logoImageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(flexibleHeight(to: 76))
             make.width.equalTo(flexibleWidth(to: 120))

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForgotPasswordView: UIView {
+class ForgotPasswordView: BaseView {
     
     let forgotPasswordLabel: UILabel = {
         let label = UILabel()
@@ -70,13 +70,11 @@ class ForgotPasswordView: UIView {
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        backgroundColor = .white
         
-        setupViews()
-        setupConstraints()
+        backgroundColor = .white
     }
         
-    fileprivate func setupViews() {
+    override func setupViews() {
         addSubview(forgotPasswordLabel)
         addSubview(backButton)
         addSubview(logoLabel)
@@ -85,7 +83,7 @@ class ForgotPasswordView: UIView {
         addSubview(nextButton)
     }
     
-    fileprivate func setupConstraints() {
+    override func setupConstraints() {
         forgotPasswordLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(flexibleHeight(to: 60))
             make.centerX.equalToSuperview()

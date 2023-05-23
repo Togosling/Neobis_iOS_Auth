@@ -23,6 +23,9 @@ class ForgotPasswordController: BaseViewController {
     
     @objc fileprivate func handleNext() {
         forgotPasswordViewModel.completePasswordRecovery()
+        view.applyBlurEffect()
+        
+//        view.addSubview(SentEmailView(frame: .init(x: 150, y: 150, width: 343, height: 343)))
     }
     
     @objc fileprivate func handleBack() {

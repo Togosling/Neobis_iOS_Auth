@@ -18,6 +18,9 @@
 		F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D662A1CE010008D6414 /* ForgotPasswordController.swift */; };
 		F0A95D692A1CE056008D6414 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D682A1CE056008D6414 /* ForgotPasswordViewModel.swift */; };
 		F0A95D6B2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6A2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift */; };
+		F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */; };
+		F0A95D702A1CF51E008D6414 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6F2A1CF51E008D6414 /* BaseView.swift */; };
+		F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -54,6 +57,9 @@
 		F0A95D662A1CE010008D6414 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0A95D682A1CE056008D6414 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		F0A95D6A2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
+		F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentEmailView.swift; sourceTree = "<group>"; };
+		F0A95D6F2A1CF51E008D6414 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -195,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F0A95D642A1CDFE8008D6414 /* ForgotPasswordView.swift */,
+				F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 			children = (
 				F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */,
 				F0A95D5A2A1C941E008D6414 /* BaseViewController.swift */,
+				F0A95D6F2A1CF51E008D6414 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 				F0DC65972A1B92C900341C08 /* FlexibleHeightWidth.swift */,
 				F0DC659A2A1B92E800341C08 /* Bindable.swift */,
 				F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */,
+				F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -530,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */,
+				F0A95D702A1CF51E008D6414 /* BaseView.swift in Sources */,
 				F0A95D652A1CDFE8008D6414 /* ForgotPasswordView.swift in Sources */,
 				F0A95D6B2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift in Sources */,
 				F0DC65982A1B92C900341C08 /* FlexibleHeightWidth.swift in Sources */,
@@ -538,10 +548,12 @@
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
+				F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
 				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,
+				F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */,
 				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
 				F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */,
 				F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */,
