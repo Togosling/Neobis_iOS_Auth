@@ -58,12 +58,27 @@ class LoginView: UIView {
         return button
     }()
     
+    let showPasswordButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(named: "hide")
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+        configuration.baseBackgroundColor = .clear
+        let button = UIButton(configuration: configuration)
+        return button
+    }()
+            
     override init(frame: CGRect) {
         super .init(frame: frame)
         backgroundColor = .white
         
+        addButtontoTextField()
         setupViews()
         setupConstraints()
+    }
+    
+    fileprivate func addButtontoTextField() {
+        passwordTextField.rightView = showPasswordButton
+        passwordTextField.rightViewMode = .always
     }
     
     fileprivate func setupViews() {

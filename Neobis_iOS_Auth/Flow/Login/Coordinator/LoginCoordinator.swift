@@ -22,4 +22,12 @@ class LoginCoordinator: Coordinator {
         let loginViewController = LoginViewController(loginViewModel: loginViewModel)
         navigationController.pushViewController(loginViewController, animated: true)
     }
+    
+    func gotoMain() {
+        
+    }
+    
+    func gotoForgotPassword() {
+        
+    }
 }

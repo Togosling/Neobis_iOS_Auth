@@ -8,11 +8,19 @@
 import UIKit
 
 protocol LoginViewModelType {
-    
+    func gotoMain()
+    func gotoForgotPassword()
 }
 
 class LoginViewModel: LoginViewModelType {
     
     var coordinator = LoginCoordinator(navigationController: BaseNavigationController.init())
     
+    func gotoMain() {
+        coordinator.gotoMain()
+    }
+    
+    func gotoForgotPassword() {
+        coordinator.gotoForgotPassword()
+    }
 }
