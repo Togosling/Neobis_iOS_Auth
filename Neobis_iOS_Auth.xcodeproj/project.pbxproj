@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A52E8342ED828AFAEA0A394E /* Pods_Neobis_iOS_Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367691171E9F2F3DD28B304B /* Pods_Neobis_iOS_Auth.framework */; };
+		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
+		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
+		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
+		F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D562A1C8692008D6414 /* RegisterView.swift */; };
+		F0A95D592A1C8A96008D6414 /* sf-pro-text_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0A95D582A1C8A96008D6414 /* sf-pro-text_semibold.ttf */; };
+		F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D5A2A1C941E008D6414 /* BaseViewController.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -34,6 +40,12 @@
 		367691171E9F2F3DD28B304B /* Pods_Neobis_iOS_Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1566DD002E287F7119F90D3 /* Pods-Neobis_iOS_Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.release.xcconfig"; sourceTree = "<group>"; };
 		B9D48B479137FFF34D01EF6E /* Pods-Neobis_iOS_Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.debug.xcconfig"; sourceTree = "<group>"; };
+		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		F0A95D562A1C8692008D6414 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F0A95D582A1C8A96008D6414 /* sf-pro-text_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sf-pro-text_semibold.ttf"; sourceTree = "<group>"; };
+		F0A95D5A2A1C941E008D6414 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -87,6 +99,47 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F0A95D4B2A1C84DA008D6414 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F0A95D4C2A1C84E0008D6414 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0A95D4D2A1C84E6008D6414 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0A95D4E2A1C84EA008D6414 /* Controller */,
+				F0A95D4F2A1C84F0008D6414 /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0A95D4E2A1C84EA008D6414 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0A95D502A1C8514008D6414 /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0A95D4F2A1C84F0008D6414 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				F0A95D562A1C8692008D6414 /* RegisterView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		F0DC658C2A1B8BDF00341C08 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */,
+				F0A95D5A2A1C941E008D6414 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -195,6 +249,7 @@
 			children = (
 				F0DC65AC2A1B992700341C08 /* Gotham Pro Medium.ttf */,
 				F0DC65AE2A1B9BE900341C08 /* Gotham Pro Black.ttf */,
+				F0A95D582A1C8A96008D6414 /* sf-pro-text_semibold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -202,6 +257,9 @@
 		F0DC65B02A1BA0DA00341C08 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				F0A95D4B2A1C84DA008D6414 /* Coordinator */,
+				F0A95D4C2A1C84E0008D6414 /* ViewModel */,
+				F0A95D4D2A1C84E6008D6414 /* View */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -356,6 +414,7 @@
 				F0E3C4022A1B52D20084C651 /* LaunchScreen.storyboard in Resources */,
 				F0DC65AF2A1B9BE900341C08 /* Gotham Pro Black.ttf in Resources */,
 				F0E3C3FF2A1B52D20084C651 /* Assets.xcassets in Resources */,
+				F0A95D592A1C8A96008D6414 /* sf-pro-text_semibold.ttf in Resources */,
 				F0E3C3FD2A1B52D10084C651 /* Main.storyboard in Resources */,
 				F0DC65AD2A1B992700341C08 /* Gotham Pro Medium.ttf in Resources */,
 			);
@@ -415,13 +474,18 @@
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
+				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
+				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,
 				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
+				F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */,
 				F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */,
+				F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */,
 				F0DC65AA2A1B95D500341C08 /* SplashView.swift in Sources */,
 				F0E3C3F62A1B52D10084C651 /* AppDelegate.swift in Sources */,
+				F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */,
 				F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */,
 				F0DC65A62A1B945F00341C08 /* SplashViewModel.swift in Sources */,
 				F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     
     fileprivate let loginViewModel: LoginViewModelType
     fileprivate let loginView = LoginView()
@@ -15,13 +15,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addTargets()
-        textFieldDelegate()
-        setupViews()
-        setupConstraints()
     }
     
-    fileprivate func addTargets() {
+    override func addTargets() {
         loginView.showPasswordButton.addTarget(self, action: #selector(handleShowPassword), for: .touchUpInside)
         loginView.enterButton.addTarget(self, action: #selector(handleEnter), for: .touchUpInside)
         loginView.forgotPasswordButton.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
@@ -45,16 +41,16 @@ class LoginViewController: UIViewController {
         }
     }
     
-    fileprivate func textFieldDelegate() {
+    override func textFieldDelegate() {
         loginView.mailTextField.delegate = self
         loginView.passwordTextField.delegate = self
     }
         
-    fileprivate func setupViews() {
+    override func setupViews() {
         view.addSubview(loginView)
     }
     
-    fileprivate func setupConstraints() {
+    override func setupConstraints() {
         loginView.snp.makeConstraints { make in
             make.size.equalToSuperview()
         }
@@ -67,18 +63,5 @@ class LoginViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-//MARK: Hide Keyboard
-extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }

@@ -24,7 +24,8 @@ class SplashCoordinator: Coordinator {
     }
         
     func gotoRegister() {
-
+        let registerCoordinator = RegisterCoordinator(navigationController: navigationController)
+        registerCoordinator.start()
     }
     
     func gotoLogin() {
