@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+    
     func applyBlurEffect() {
         let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)

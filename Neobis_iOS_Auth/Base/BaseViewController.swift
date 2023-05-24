@@ -34,4 +34,9 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+        
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let textField = textField as? CustomTextField else {return}
+        textField.addPlaceHolder(textField)
+    }
 }

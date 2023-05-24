@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A52E8342ED828AFAEA0A394E /* Pods_Neobis_iOS_Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367691171E9F2F3DD28B304B /* Pods_Neobis_iOS_Auth.framework */; };
+		F01A29402A1DEC2100211F7C /* Gotham Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F01A293F2A1DEC2000211F7C /* Gotham Pro Regular.ttf */; };
 		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
 		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
 		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
@@ -47,6 +48,7 @@
 		367691171E9F2F3DD28B304B /* Pods_Neobis_iOS_Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1566DD002E287F7119F90D3 /* Pods-Neobis_iOS_Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.release.xcconfig"; sourceTree = "<group>"; };
 		B9D48B479137FFF34D01EF6E /* Pods-Neobis_iOS_Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.debug.xcconfig"; sourceTree = "<group>"; };
+		F01A293F2A1DEC2000211F7C /* Gotham Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Pro Regular.ttf"; sourceTree = "<group>"; };
 		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -248,8 +250,8 @@
 			children = (
 				F0DC65972A1B92C900341C08 /* FlexibleHeightWidth.swift */,
 				F0DC659A2A1B92E800341C08 /* Bindable.swift */,
-				F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */,
 				F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */,
+				F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -318,6 +320,7 @@
 			children = (
 				F0DC65AC2A1B992700341C08 /* Gotham Pro Medium.ttf */,
 				F0DC65AE2A1B9BE900341C08 /* Gotham Pro Black.ttf */,
+				F01A293F2A1DEC2000211F7C /* Gotham Pro Regular.ttf */,
 				F0A95D582A1C8A96008D6414 /* sf-pro-text_semibold.ttf */,
 			);
 			path = Fonts;
@@ -481,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0E3C4022A1B52D20084C651 /* LaunchScreen.storyboard in Resources */,
+				F01A29402A1DEC2100211F7C /* Gotham Pro Regular.ttf in Resources */,
 				F0DC65AF2A1B9BE900341C08 /* Gotham Pro Black.ttf in Resources */,
 				F0E3C3FF2A1B52D20084C651 /* Assets.xcassets in Resources */,
 				F0A95D592A1C8A96008D6414 /* sf-pro-text_semibold.ttf in Resources */,
