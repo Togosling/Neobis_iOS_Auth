@@ -37,6 +37,7 @@ class LoginView: BaseView {
         textField.attributedPlaceholder = NSMutableAttributedString(string: "Пароль", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle,NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
         textField.layer.cornerRadius = 8
         textField.isSecureTextEntry = true
+        textField.addButtontoTextField(textField)
         return textField
     }()
     
@@ -57,28 +58,13 @@ class LoginView: BaseView {
         button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
         return button
     }()
-    
-    let showPasswordButton: UIButton = {
-        var configuration = UIButton.Configuration.filled()
-        configuration.image = UIImage(named: "hide")
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
-        configuration.baseBackgroundColor = .clear
-        let button = UIButton(configuration: configuration)
-        return button
-    }()
-            
+                
     override init(frame: CGRect) {
         super .init(frame: frame)
         
         backgroundColor = .white
-        addButtontoTextField()
     }
-    
-    fileprivate func addButtontoTextField() {
-        passwordTextField.rightView = showPasswordButton
-        passwordTextField.rightViewMode = .always
-    }
-    
+        
     override func setupViews() {
         addSubview(logoImageView)
         addSubview(mailTextField)

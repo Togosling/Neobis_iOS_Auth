@@ -9,6 +9,7 @@ import UIKit
 
 class CustomTextField: UITextField {
         
+    // MARK: Left Padding
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 10, dy: 0)
     }
@@ -17,6 +18,7 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: 10, dy: 0)
     }
     
+    //MARK: FloatingTextField
     func addPlaceHolder(_ textField: UITextField) {
         guard let placeholder = textField.placeholder else {return}
         let label = UILabel()
@@ -54,6 +56,36 @@ class CustomTextField: UITextField {
                 label.frame.origin.y = textField.bounds.origin.y + 5.0
                 label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
                 label.font = UIFont(name: "GothamPro-Medium", size: 12)
+            }
+        }
+    }
+    
+    //MARK: Add Button To TextField
+    let showPasswordButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.image = UIImage(named: "hide")
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10)
+        configuration.baseBackgroundColor = .clear
+        let button = UIButton(configuration: configuration)
+        return button
+    }()
+    
+    func addButtontoTextField(_ textField: UITextField) {
+        textField.rightView = showPasswordButton
+        textField.rightViewMode = .always
+        showPasswordButton.addTarget(self, action: #selector(handleShowPassword), for: .touchUpInside)
+    }
+    
+    @objc func handleShowPassword(sender: UIButton) {
+        if sender.configuration?.image == UIImage(named: "hide") {
+            sender.configuration?.image = UIImage(named: "show")?.withTintColor(.black)
+            if let textField = sender.superview as? UITextField {
+                textField.isSecureTextEntry = false
+            }
+        } else {
+            sender.configuration?.image = UIImage(named: "hide")
+            if let textField = sender.superview as? UITextField {
+                textField.isSecureTextEntry = true
             }
         }
     }

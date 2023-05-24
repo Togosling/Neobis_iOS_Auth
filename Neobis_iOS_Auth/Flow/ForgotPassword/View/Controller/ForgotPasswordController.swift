@@ -29,6 +29,7 @@ class ForgotPasswordController: BaseViewController {
                 subView.removeFromSuperview()
             }
         }
+        forgotPasswordViewModel.gotoPasswordReset()
     }
     
     @objc fileprivate func handleNext() {

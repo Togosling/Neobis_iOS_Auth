@@ -18,7 +18,6 @@ class LoginViewController: BaseViewController {
     }
     
     override func addTargets() {
-        loginView.showPasswordButton.addTarget(self, action: #selector(handleShowPassword), for: .touchUpInside)
         loginView.enterButton.addTarget(self, action: #selector(handleEnter), for: .touchUpInside)
         loginView.forgotPasswordButton.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
     }
@@ -30,17 +29,7 @@ class LoginViewController: BaseViewController {
     @objc fileprivate func handleForgotPassword() {
         loginViewModel.gotoForgotPassword()
     }
-    
-    @objc fileprivate func handleShowPassword(sender: UIButton) {
-        if sender.configuration?.image == UIImage(named: "hide") {
-            loginView.showPasswordButton.configuration?.image = UIImage(named: "show")?.withTintColor(.black)
-            loginView.passwordTextField.isSecureTextEntry = false
-        } else {
-            loginView.showPasswordButton.configuration?.image = UIImage(named: "hide")
-            loginView.passwordTextField.isSecureTextEntry = true
-        }
-    }
-    
+        
     override func textFieldDelegate() {
         loginView.mailTextField.delegate = self
         loginView.passwordTextField.delegate = self

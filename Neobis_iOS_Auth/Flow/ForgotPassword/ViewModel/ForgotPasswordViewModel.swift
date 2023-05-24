@@ -10,10 +10,11 @@ import UIKit
 protocol ForgotPasswordViewModelType {
     func goBack()
     func completePasswordRecovery()
+    func gotoPasswordReset()
 }
 
 class ForgotPasswordViewModel: ForgotPasswordViewModelType {
-    
+
     var coordinator = ForgotPasswordCoordinator(navigationController: BaseNavigationController.init())
     
     func goBack() {
@@ -23,4 +24,9 @@ class ForgotPasswordViewModel: ForgotPasswordViewModelType {
     func completePasswordRecovery() {
         coordinator.completePasswordRecovery()
     }
+    
+    func gotoPasswordReset() {
+        coordinator.gotoPasswordReset()
+    }
+    
 }

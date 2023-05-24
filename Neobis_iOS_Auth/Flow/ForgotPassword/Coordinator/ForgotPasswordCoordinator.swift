@@ -31,4 +31,8 @@ class ForgotPasswordCoordinator: Coordinator {
         
     }
     
+    func gotoPasswordReset() {
+        let passwordResetCoordinator = PasswordResetCoordinator(navigationController: navigationController)
+        passwordResetCoordinator.start()
+    }
 }

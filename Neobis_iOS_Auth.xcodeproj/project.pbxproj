@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A52E8342ED828AFAEA0A394E /* Pods_Neobis_iOS_Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 367691171E9F2F3DD28B304B /* Pods_Neobis_iOS_Auth.framework */; };
 		F01A29402A1DEC2100211F7C /* Gotham Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F01A293F2A1DEC2000211F7C /* Gotham Pro Regular.ttf */; };
+		F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A29472A1E29BF00211F7C /* PasswordResetView.swift */; };
+		F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A29492A1E2AFD00211F7C /* PasswordResetViewController.swift */; };
+		F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294B2A1E2B4F00211F7C /* PasswordResetViewModel.swift */; };
+		F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */; };
 		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
 		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
 		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
@@ -49,6 +53,10 @@
 		A1566DD002E287F7119F90D3 /* Pods-Neobis_iOS_Auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.release.xcconfig"; sourceTree = "<group>"; };
 		B9D48B479137FFF34D01EF6E /* Pods-Neobis_iOS_Auth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_Auth.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_Auth/Pods-Neobis_iOS_Auth.debug.xcconfig"; sourceTree = "<group>"; };
 		F01A293F2A1DEC2000211F7C /* Gotham Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Pro Regular.ttf"; sourceTree = "<group>"; };
+		F01A29472A1E29BF00211F7C /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
+		F01A29492A1E2AFD00211F7C /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		F01A294B2A1E2B4F00211F7C /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
+		F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetCoordinator.swift; sourceTree = "<group>"; };
 		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -105,6 +113,57 @@
 				A1566DD002E287F7119F90D3 /* Pods-Neobis_iOS_Auth.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F01A29412A1E27F300211F7C /* PasswordReset */ = {
+			isa = PBXGroup;
+			children = (
+				F01A29422A1E286600211F7C /* Coordinator */,
+				F01A29432A1E286C00211F7C /* ViewModel */,
+				F01A29442A1E287200211F7C /* View */,
+			);
+			path = PasswordReset;
+			sourceTree = "<group>";
+		};
+		F01A29422A1E286600211F7C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F01A29432A1E286C00211F7C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F01A294B2A1E2B4F00211F7C /* PasswordResetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F01A29442A1E287200211F7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F01A29452A1E29A000211F7C /* Controller */,
+				F01A29462A1E29A700211F7C /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F01A29452A1E29A000211F7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F01A29492A1E2AFD00211F7C /* PasswordResetViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F01A29462A1E29A700211F7C /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				F01A29472A1E29BF00211F7C /* PasswordResetView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 		F078EA603D5FBB05FDD7EC4C /* Frameworks */ = {
@@ -224,6 +283,7 @@
 				F0DC65B12A1BA0F400341C08 /* Login */,
 				F0DC65B02A1BA0DA00341C08 /* Register */,
 				F0A95D5E2A1CDF92008D6414 /* ForgotPassword */,
+				F01A29412A1E27F300211F7C /* PasswordReset */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -547,14 +607,17 @@
 				F0A95D652A1CDFE8008D6414 /* ForgotPasswordView.swift in Sources */,
 				F0A95D6B2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift in Sources */,
 				F0DC65982A1B92C900341C08 /* FlexibleHeightWidth.swift in Sources */,
+				F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
+				F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
 				F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
+				F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
 				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,
 				F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */,
@@ -568,6 +631,7 @@
 				F0A95D692A1CE056008D6414 /* ForgotPasswordViewModel.swift in Sources */,
 				F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */,
 				F0DC65A62A1B945F00341C08 /* SplashViewModel.swift in Sources */,
+				F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */,
 				F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
