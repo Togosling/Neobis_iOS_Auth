@@ -9,39 +9,27 @@ import UIKit
 
 class SplashView: BaseView {
     
-    let logoImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "smile")
+    let logoImageView: CustomImageView = {
+        let iv = CustomImageView()
+        iv.customLogoImageViewSetup(iv: iv)
         return iv
     }()
     
-    let logoLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        label.font = UIFont(name: "GothamPro-Medium", size: 40)
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        label.attributedText = NSMutableAttributedString(string: "Смейся \nи улыбайся каждый день", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+    let logoLabel: CustomLabel = {
+        let label = CustomLabel()
+        label.customLogoLabel(label: label)
         return label
     }()
     
-    let beginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        button.setTitleColor( .white, for: .normal)
-        button.setTitle("Начать пользоваться", for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
-        button.layer.cornerRadius = 16
+    let beginButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customProceedButtonSetup(button: button, string: "Начать пользоваться")
         return button
     }()
     
-    let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Есть аккаунт? Войти", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
+    let loginButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customBottomButtonSetup(button: button, string: "Есть аккаунт? Войти")
         return button
     }()
     

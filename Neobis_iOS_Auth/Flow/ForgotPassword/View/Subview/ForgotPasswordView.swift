@@ -9,40 +9,27 @@ import UIKit
 
 class ForgotPasswordView: BaseView {
     
-    let forgotPasswordLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        label.font = UIFont(name: "SFProText-Semibold", size: 18)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.12
-        label.attributedText = NSMutableAttributedString(string: "Сброс пароля", attributes: [NSAttributedString.Key.kern: -0.41, NSAttributedString.Key.paragraphStyle: paragraphStyle])
+    let forgotPasswordLabel: CustomLabel = {
+        let label = CustomLabel()
+        label.customTopLabel(label: label, string: "Сброс пароля")
         return label
     }()
     
-    let backButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "back"), for: .normal)
-        button.tintColor = .black
-        button.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.2)
-        button.layer.cornerRadius = 12
+    let backButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customBackButtonSetup(button: button)
         return button
     }()
     
-    let logoImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "smile")
+    let logoImageView: CustomImageView = {
+        let iv = CustomImageView()
+        iv.customLogoImageViewSetup(iv: iv)
         return iv
     }()
     
-    let logoLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        label.font = UIFont(name: "GothamPro-Medium", size: 40)
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        label.attributedText = NSMutableAttributedString(string: "Смейся \nи улыбайся каждый день", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
+    let logoLabel: CustomLabel = {
+        let label = CustomLabel()
+        label.customLogoLabel(label: label)
         return label
     }()
     
@@ -52,13 +39,9 @@ class ForgotPasswordView: BaseView {
         return textField
     }()
     
-    let nextButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        button.setTitleColor( .white, for: .normal)
-        button.setTitle("Далее", for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
-        button.layer.cornerRadius = 16
+    let nextButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customProceedButtonSetup(button: button, string: "Далее")
         return button
     }()
     

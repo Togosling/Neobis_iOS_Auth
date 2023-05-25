@@ -9,9 +9,9 @@ import UIKit
 
 class LoginView: BaseView {
     
-    let logoImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "smile")
+    let logoImageView: CustomImageView = {
+        let iv = CustomImageView()
+        iv.customLogoImageViewSetup(iv: iv)
         return iv
     }()
     
@@ -28,21 +28,15 @@ class LoginView: BaseView {
         return textField
     }()
     
-    let enterButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        button.setTitleColor( .white, for: .normal)
-        button.setTitle("Войти", for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
-        button.layer.cornerRadius = 16
+    let enterButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customProceedButtonSetup(button: button, string: "Войти")
         return button
     }()
     
-    let forgotPasswordButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Забыли пароль?", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
+    let forgotPasswordButton: CustomButton = {
+        let button = CustomButton(type: .system)
+        button.customBottomButtonSetup(button: button, string: "Забыли пароль?")
         return button
     }()
                 
