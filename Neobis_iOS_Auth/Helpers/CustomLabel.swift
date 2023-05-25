@@ -49,4 +49,11 @@ class CustomLabel: UILabel {
         paragraphStyle.lineHeightMultiple = 1.25
         label.attributedText = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
+    
+    func customSentPasswordLabel(label: UILabel) {
+        label.textColor = UIColor(red: 0.287, green: 0.287, blue: 0.287, alpha: 1)
+        label.font = UIFont(name: "GothamPro-Medium", size: 20)
+        label.textAlignment = .center
+        label.text = "Мы отправили код на почту"
+    }
 }

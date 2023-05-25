@@ -8,10 +8,15 @@
 import UIKit
 
 protocol PasswordResetViewModelType {
-    
+    func finishPasswordReset()
 }
 
 class PasswordResetViewModel: PasswordResetViewModelType {
     
     var coordinator = PasswordResetCoordinator(navigationController: BaseNavigationController.init())
+    
+    func finishPasswordReset() {
+        coordinator.finishPasswordReset()
+    }
+
 }

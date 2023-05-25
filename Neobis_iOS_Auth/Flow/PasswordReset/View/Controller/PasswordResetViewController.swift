@@ -16,6 +16,14 @@ class PasswordResetViewController: BaseViewController {
         super.viewDidLoad()
         
     }
+    
+    override func addTargets() {
+        passwordResetView.nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func handleNext() {
+        passwordResetViewModel.finishPasswordReset()
+    }
         
     override func textFieldDelegate() {
         passwordResetView.passwordTextField.delegate = self

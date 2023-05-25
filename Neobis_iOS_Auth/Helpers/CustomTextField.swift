@@ -28,6 +28,14 @@ class CustomTextField: UITextField {
         textField.layer.cornerRadius = 8
     }
     
+    func customOTPTextField(_ textField: UITextField) {
+        textField.textColor = .black
+        textField.font = UIFont(name: "GothamPro-Black", size: 28)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.27
+        textField.attributedPlaceholder = NSMutableAttributedString(string: "0", attributes: [NSAttributedString.Key.kern: 0.36, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)])
+    }
+    
     //MARK: FloatingTextField
     func addPlaceHolder(_ textField: UITextField) {
         guard let placeholder = textField.placeholder else {return}

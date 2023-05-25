@@ -22,4 +22,10 @@ class PasswordResetCoordinator: Coordinator {
         let passwordResetViewController = PasswordResetViewController(passwordResetViewModel: passwordResetViewModel)
         navigationController.pushViewController(passwordResetViewController, animated: true)
     }
+    
+    func finishPasswordReset() {
+        //NEED OF REFACTORING
+        navigationController.popViewController(animated: true)
+        navigationController.popViewController(animated: true)
+    }
 }

@@ -29,6 +29,10 @@
 		F0CE10B72A1F1B5C00517EAB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */; };
 		F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */; };
 		F0CE10BB2A1F206100517EAB /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10BA2A1F206100517EAB /* CustomLabel.swift */; };
+		F0CE10C32A1F2BAB00517EAB /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C22A1F2BAB00517EAB /* OTPView.swift */; };
+		F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */; };
+		F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */; };
+		F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -76,6 +80,10 @@
 		F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		F0CE10BA2A1F206100517EAB /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		F0CE10C22A1F2BAB00517EAB /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
+		F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -273,6 +281,57 @@
 			path = Subview;
 			sourceTree = "<group>";
 		};
+		F0CE10BC2A1F2B3000517EAB /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10BD2A1F2B7300517EAB /* Coordinator */,
+				F0CE10BE2A1F2B7900517EAB /* ViewModel */,
+				F0CE10BF2A1F2B7E00517EAB /* View */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		F0CE10BD2A1F2B7300517EAB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F0CE10BE2A1F2B7900517EAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0CE10BF2A1F2B7E00517EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10C02A1F2B8700517EAB /* Controller */,
+				F0CE10C12A1F2B8F00517EAB /* View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0CE10C02A1F2B8700517EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0CE10C12A1F2B8F00517EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10C22A1F2BAB00517EAB /* OTPView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F0DC658C2A1B8BDF00341C08 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +349,7 @@
 				F0DC65B02A1BA0DA00341C08 /* Register */,
 				F0A95D5E2A1CDF92008D6414 /* ForgotPassword */,
 				F01A29412A1E27F300211F7C /* PasswordReset */,
+				F0CE10BC2A1F2B3000517EAB /* OTP */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -621,8 +681,11 @@
 				F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */,
 				F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,
+				F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
+				F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */,
+				F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */,
 				F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
@@ -632,6 +695,7 @@
 				F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
 				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,
+				F0CE10C32A1F2BAB00517EAB /* OTPView.swift in Sources */,
 				F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */,
 				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
 				F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */,

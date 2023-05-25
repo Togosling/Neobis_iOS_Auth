@@ -27,7 +27,8 @@ class RegisterCoordinator: Coordinator {
         navigationController.popViewController(animated: true)
     }
     
-    func completeRegistration() {
-        
+    func gotoOTP() {
+        let otpCoordinator = OTPCoordinator(navigationController: navigationController)
+        otpCoordinator.start()
     }
 }

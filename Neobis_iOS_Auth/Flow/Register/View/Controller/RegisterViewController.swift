@@ -23,7 +23,7 @@ class RegisterViewController: BaseViewController {
     }
     
     @objc fileprivate func handleNext() {
-        registerViewModel.completeRegistration()
+        registerViewModel.gotoOTP()
     }
     
     @objc fileprivate func handleBack() {
