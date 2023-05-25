@@ -9,7 +9,7 @@ import UIKit
 
 protocol OTPViewModelType {
     func goBack()
-    
+    func gotoDetails()
 }
 
 class OTPViewModel: OTPViewModelType {
@@ -18,5 +18,9 @@ class OTPViewModel: OTPViewModelType {
     
     func goBack() {
         coordinator.goBack()
+    }
+    
+    func gotoDetails() {
+        coordinator.gotoDetails()
     }
 }

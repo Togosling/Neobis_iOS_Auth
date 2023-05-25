@@ -34,6 +34,10 @@
 		F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */; };
 		F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */; };
 		F0CE10CB2A1F4BF300517EAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */; };
+		F0CE10D32A1F586200517EAB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D22A1F586200517EAB /* DetailsView.swift */; };
+		F0CE10D52A1F588000517EAB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D42A1F588000517EAB /* DetailsViewController.swift */; };
+		F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */; };
+		F0CE10D92A1F595200517EAB /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D82A1F595200517EAB /* DetailsCoordinator.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -86,6 +90,10 @@
 		F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
 		F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F0CE10D22A1F586200517EAB /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		F0CE10D42A1F588000517EAB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		F0CE10D82A1F595200517EAB /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -334,6 +342,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F0CE10CC2A1F57E800517EAB /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10CD2A1F580200517EAB /* Coordinator */,
+				F0CE10CF2A1F580D00517EAB /* ViewModel */,
+				F0CE10CE2A1F580800517EAB /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		F0CE10CD2A1F580200517EAB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10D82A1F595200517EAB /* DetailsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F0CE10CE2A1F580800517EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10D02A1F581800517EAB /* Controller */,
+				F0CE10D12A1F581E00517EAB /* View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0CE10CF2A1F580D00517EAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0CE10D02A1F581800517EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10D42A1F588000517EAB /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0CE10D12A1F581E00517EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10D22A1F586200517EAB /* DetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F0DC658C2A1B8BDF00341C08 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +411,7 @@
 				F0A95D5E2A1CDF92008D6414 /* ForgotPassword */,
 				F01A29412A1E27F300211F7C /* PasswordReset */,
 				F0CE10BC2A1F2B3000517EAB /* OTP */,
+				F0CE10CC2A1F57E800517EAB /* Details */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -675,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */,
+				F0CE10D52A1F588000517EAB /* DetailsViewController.swift in Sources */,
 				F0A95D702A1CF51E008D6414 /* BaseView.swift in Sources */,
 				F0A95D652A1CDFE8008D6414 /* ForgotPasswordView.swift in Sources */,
 				F0A95D6B2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift in Sources */,
@@ -684,6 +745,7 @@
 				F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */,
 				F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,
+				F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */,
 				F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
@@ -693,8 +755,10 @@
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
 				F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */,
+				F0CE10D92A1F595200517EAB /* DetailsCoordinator.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
+				F0CE10D32A1F586200517EAB /* DetailsView.swift in Sources */,
 				F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
 				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,

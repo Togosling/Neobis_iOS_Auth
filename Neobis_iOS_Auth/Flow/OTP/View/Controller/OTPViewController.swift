@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OTPViewController: BaseViewController {
+class OTPViewController: UIViewController {
     
     fileprivate let otpViewModel: OTPViewModelType
     fileprivate let otpView = OTPView()
@@ -15,9 +15,17 @@ class OTPViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addTargets()
+        textFieldDelegate()
+        setupViews()
+        setupConstraints()
     }
     
-    override func addTargets() {
+    func textFieldDelegate() {
+        otpView.passwordTextField4.delegate = self
+    }
+    
+    func addTargets() {
         otpView.passwordTextField1.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         otpView.passwordTextField2.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         otpView.passwordTextField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
@@ -30,45 +38,45 @@ class OTPViewController: BaseViewController {
     }
     
     @objc func textFieldDidChange(textField: UITextField){
-            let text = textField.text
-            if  text?.count == 1 {
-                switch textField{
-                case otpView.passwordTextField1:
-                    otpView.passwordTextField2.becomeFirstResponder()
-                case otpView.passwordTextField2:
-                    otpView.passwordTextField3.becomeFirstResponder()
-                case otpView.passwordTextField3:
-                    otpView.passwordTextField4.becomeFirstResponder()
-                case otpView.passwordTextField4:
-                    otpView.passwordTextField4.resignFirstResponder()
-                default:
-                    break
-                }
-            }
-            if  text?.count == 0 {
-                switch textField{
-                case otpView.passwordTextField1:
-                    otpView.passwordTextField1.becomeFirstResponder()
-                case otpView.passwordTextField2:
-                    otpView.passwordTextField1.becomeFirstResponder()
-                case otpView.passwordTextField3:
-                    otpView.passwordTextField2.becomeFirstResponder()
-                case otpView.passwordTextField4:
-                    otpView.passwordTextField3.becomeFirstResponder()
-                default:
-                    break
-                }
-            }
-            else{
-
+        let text = textField.text
+        if  text?.count == 1 {
+            switch textField{
+            case otpView.passwordTextField1:
+                otpView.passwordTextField2.becomeFirstResponder()
+            case otpView.passwordTextField2:
+                otpView.passwordTextField3.becomeFirstResponder()
+            case otpView.passwordTextField3:
+                otpView.passwordTextField4.becomeFirstResponder()
+            case otpView.passwordTextField4:
+                otpView.passwordTextField4.resignFirstResponder()
+            default:
+                break
             }
         }
+        if  text?.count == 0 {
+            switch textField{
+            case otpView.passwordTextField1:
+                otpView.passwordTextField1.becomeFirstResponder()
+            case otpView.passwordTextField2:
+                otpView.passwordTextField1.becomeFirstResponder()
+            case otpView.passwordTextField3:
+                otpView.passwordTextField2.becomeFirstResponder()
+            case otpView.passwordTextField4:
+                otpView.passwordTextField3.becomeFirstResponder()
+            default:
+                break
+            }
+        }
+        else{
+            
+        }
+    }
     
-    override func setupViews() {
+    func setupViews() {
         view.addSubview(otpView)
     }
     
-    override func setupConstraints() {
+    func setupConstraints() {
         otpView.snp.makeConstraints { make in
             make.size.equalToSuperview()
         }
@@ -83,4 +91,20 @@ class OTPViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension OTPViewController: UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        otpViewModel.gotoDetails()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

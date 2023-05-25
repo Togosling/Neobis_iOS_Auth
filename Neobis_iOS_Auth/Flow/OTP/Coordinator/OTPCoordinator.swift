@@ -26,4 +26,9 @@ class OTPCoordinator: Coordinator {
     func goBack() {
         navigationController.popViewController(animated: true)
     }
+    
+    func gotoDetails() {
+        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController)
+        detailsCoordinator.start()
+    }
 }
