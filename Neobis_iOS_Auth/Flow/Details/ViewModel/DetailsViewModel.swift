@@ -8,10 +8,15 @@
 import UIKit
 
 protocol DetailsViewModelType {
+    func gotoCreatePassword()
     
 }
 
 class DetailsViewModel: DetailsViewModelType {
     
     var coordinator = DetailsCoordinator(navigationController: BaseNavigationController.init())
+    
+    func gotoCreatePassword() {
+        coordinator.gotoCreatePassword()
+    }
 }

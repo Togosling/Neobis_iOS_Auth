@@ -17,11 +17,21 @@ class DetailsViewController: BaseViewController {
         
     }
     
-    init(detailsViewModel: DetailsViewModelType) {
-        self.detailsViewModel = detailsViewModel
-        super .init(nibName: nil, bundle: nil)
+    override func addTargets() {
+        detailsView.registerButton.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
     }
-        
+    
+    @objc func handleRegister() {
+        detailsViewModel.gotoCreatePassword()
+    }
+    
+    override func textFieldDelegate() {
+        detailsView.mailTextField.delegate = self
+        detailsView.nameTextField.delegate = self
+        detailsView.surnameTextField.delegate = self
+        detailsView.dateOfBirthTextField.delegate = self
+    }
+            
     override func setupViews() {
         view.addSubview(detailsView)
     }
@@ -30,6 +40,11 @@ class DetailsViewController: BaseViewController {
         detailsView.snp.makeConstraints { make in
             make.size.equalToSuperview()
         }
+    }
+    
+    init(detailsViewModel: DetailsViewModelType) {
+        self.detailsViewModel = detailsViewModel
+        super .init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {

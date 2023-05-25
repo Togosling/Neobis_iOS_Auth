@@ -38,6 +38,10 @@
 		F0CE10D52A1F588000517EAB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D42A1F588000517EAB /* DetailsViewController.swift */; };
 		F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */; };
 		F0CE10D92A1F595200517EAB /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D82A1F595200517EAB /* DetailsCoordinator.swift */; };
+		F0CE10E52A1F80EF00517EAB /* CreatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10E42A1F80EF00517EAB /* CreatePasswordViewModel.swift */; };
+		F0CE10E72A1F822700517EAB /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10E62A1F822700517EAB /* CreatePasswordView.swift */; };
+		F0CE10E92A1F827000517EAB /* CreatePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10E82A1F827000517EAB /* CreatePasswordViewController.swift */; };
+		F0CE10EB2A1F830C00517EAB /* CreatePasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10EA2A1F830C00517EAB /* CreatePasswordCoordinator.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -94,6 +98,10 @@
 		F0CE10D42A1F588000517EAB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		F0CE10D82A1F595200517EAB /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		F0CE10E42A1F80EF00517EAB /* CreatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewModel.swift; sourceTree = "<group>"; };
+		F0CE10E62A1F822700517EAB /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		F0CE10E82A1F827000517EAB /* CreatePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewController.swift; sourceTree = "<group>"; };
+		F0CE10EA2A1F830C00517EAB /* CreatePasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -393,6 +401,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F0CE10DA2A1F7FED00517EAB /* CreatePassword */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10DB2A1F7FF700517EAB /* Coordinator */,
+				F0CE10DD2A1F800200517EAB /* ViewModel */,
+				F0CE10DC2A1F7FFD00517EAB /* View */,
+			);
+			path = CreatePassword;
+			sourceTree = "<group>";
+		};
+		F0CE10DB2A1F7FF700517EAB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10EA2A1F830C00517EAB /* CreatePasswordCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F0CE10DC2A1F7FFD00517EAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10DE2A1F800D00517EAB /* Controller */,
+				F0CE10DF2A1F801200517EAB /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0CE10DD2A1F800200517EAB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10E42A1F80EF00517EAB /* CreatePasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F0CE10DE2A1F800D00517EAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10E82A1F827000517EAB /* CreatePasswordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0CE10DF2A1F801200517EAB /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				F0CE10E62A1F822700517EAB /* CreatePasswordView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
 		F0DC658C2A1B8BDF00341C08 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +471,7 @@
 				F01A29412A1E27F300211F7C /* PasswordReset */,
 				F0CE10BC2A1F2B3000517EAB /* OTP */,
 				F0CE10CC2A1F57E800517EAB /* Details */,
+				F0CE10DA2A1F7FED00517EAB /* CreatePassword */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -746,11 +806,13 @@
 				F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,
 				F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */,
+				F0CE10E72A1F822700517EAB /* CreatePasswordView.swift in Sources */,
 				F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
 				F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */,
 				F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */,
+				F0CE10EB2A1F830C00517EAB /* CreatePasswordCoordinator.swift in Sources */,
 				F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
@@ -758,6 +820,7 @@
 				F0CE10D92A1F595200517EAB /* DetailsCoordinator.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
+				F0CE10E52A1F80EF00517EAB /* CreatePasswordViewModel.swift in Sources */,
 				F0CE10D32A1F586200517EAB /* DetailsView.swift in Sources */,
 				F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
@@ -765,6 +828,7 @@
 				F0CE10C32A1F2BAB00517EAB /* OTPView.swift in Sources */,
 				F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */,
 				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
+				F0CE10E92A1F827000517EAB /* CreatePasswordViewController.swift in Sources */,
 				F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */,
 				F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */,
 				F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */,

@@ -22,4 +22,9 @@ class DetailsCoordinator: Coordinator {
         let detailsViewController = DetailsViewController(detailsViewModel: detailsViewModel)
         navigationController.pushViewController(detailsViewController, animated: true)
     }
+    
+    func gotoCreatePassword() {
+        let createPasswordCoordinator = CreatePasswordCoordinator(navigationController: navigationController)
+        createPasswordCoordinator.start()
+    }
 }

@@ -9,10 +9,76 @@ import Foundation
 
 class DetailsView: BaseView {
     
+    let nameTextField: CustomTextField = {
+        let textField = CustomTextField()
+        textField.customTextFieldSetup(textField, string: "Имя")
+        return textField
+    }()
+    
+    let surnameTextField: CustomTextField = {
+        let textField = CustomTextField()
+        textField.customTextFieldSetup(textField, string: "Фамилия")
+        return textField
+    }()
+    
+    let dateOfBirthTextField: CustomTextField = {
+        let textField = CustomTextField()
+        textField.customTextFieldSetup(textField, string: "День рождения")
+        return textField
+    }()
+    
+    let mailTextField: CustomTextField = {
+        let textField = CustomTextField()
+        textField.customTextFieldSetup(textField, string: "Электронная почта")
+        return textField
+    }()
+    
+    let registerButton: CustomButton = {
+        let button = CustomButton()
+        button.customProceedButtonSetup(button: button, string: "Зарегистрироваться")
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         
         backgroundColor = .white
+    }
+    
+    override func setupViews() {
+        addSubview(nameTextField)
+        addSubview(surnameTextField)
+        addSubview(dateOfBirthTextField)
+        addSubview(mailTextField)
+        addSubview(registerButton)
+    }
+    
+    override func setupConstraints() {
+        nameTextField.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(flexibleHeight(to: 84))
+            make.leading.trailing.equalToSuperview().inset(flexibleWidth(to: 20))
+            make.height.equalTo(flexibleHeight(to: 60))
+        }
+        surnameTextField.snp.makeConstraints { make in
+            make.top.equalTo(nameTextField.snp.bottom).offset(flexibleHeight(to: 24))
+            make.leading.trailing.equalToSuperview().inset(flexibleWidth(to: 20))
+            make.height.equalTo(flexibleHeight(to: 60))
+        }
+        dateOfBirthTextField.snp.makeConstraints { make in
+            make.top.equalTo(surnameTextField.snp.bottom).offset(flexibleHeight(to: 24))
+            make.leading.trailing.equalToSuperview().inset(flexibleWidth(to: 20))
+            make.height.equalTo(flexibleHeight(to: 60))
+        }
+        mailTextField.snp.makeConstraints { make in
+            make.top.equalTo(dateOfBirthTextField.snp.bottom).offset(flexibleHeight(to: 24))
+            make.leading.trailing.equalToSuperview().inset(flexibleWidth(to: 20))
+            make.height.equalTo(flexibleHeight(to: 60))
+        }
+        registerButton.snp.makeConstraints { make in
+            make.top.equalTo(mailTextField.snp.bottom).offset(flexibleHeight(to: 44))
+            make.leading.trailing.equalToSuperview().inset(flexibleWidth(to: 20))
+            make.height.equalTo(flexibleHeight(to: 65))
+        }
     }
     
     required init?(coder: NSCoder) {
