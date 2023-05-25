@@ -17,26 +17,13 @@ class LoginView: BaseView {
     
     let mailTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "Электронная почта", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
-        textField.layer.cornerRadius = 8
+        textField.customTextFieldSetup(textField, string: "Электронная почта")
         return textField
     }()
     
     let passwordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "Пароль", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle,NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
-        textField.layer.cornerRadius = 8
-        textField.isSecureTextEntry = true
+        textField.customTextFieldSetup(textField, string: "Пароль")
         textField.addButtontoTextField(textField)
         return textField
     }()

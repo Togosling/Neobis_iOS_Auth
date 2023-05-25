@@ -21,28 +21,14 @@ class PasswordResetView: BaseView {
     
     let passwordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "Придумайте пароль", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
-        textField.layer.cornerRadius = 8
-        textField.isSecureTextEntry = true
+        textField.customTextFieldSetup(textField, string: "Придумайте пароль")
         textField.addButtontoTextField(textField)
         return textField
     }()
     
     let againPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
-        var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "Повторите пароль", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
-        textField.layer.cornerRadius = 8
-        textField.isSecureTextEntry = true
+        textField.customTextFieldSetup(textField, string: "Повторите пароль")
         textField.addButtontoTextField(textField)
         return textField
     }()

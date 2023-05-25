@@ -18,6 +18,16 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: 10, dy: 0)
     }
     
+    func customTextFieldSetup(_ textField: UITextField, string: String) {
+        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
+        textField.textColor = .black
+        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.25
+        textField.attributedPlaceholder = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
+        textField.layer.cornerRadius = 8
+    }
+    
     //MARK: FloatingTextField
     func addPlaceHolder(_ textField: UITextField) {
         guard let placeholder = textField.placeholder else {return}
@@ -73,6 +83,7 @@ class CustomTextField: UITextField {
     func addButtontoTextField(_ textField: UITextField) {
         textField.rightView = showPasswordButton
         textField.rightViewMode = .always
+        textField.isSecureTextEntry = true
         showPasswordButton.addTarget(self, action: #selector(handleShowPassword), for: .touchUpInside)
     }
     
