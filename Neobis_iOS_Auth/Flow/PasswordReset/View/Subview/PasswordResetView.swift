@@ -59,25 +59,25 @@ class PasswordResetView: BaseView {
         return label
     }()
     
-    let elipseImageView1: CustomImageView = {
+    let firstElipseImageView: CustomImageView = {
         let iv = CustomImageView()
         iv.customEllipseImageViewSetup(iv: iv)
         return iv
     }()
     
-    let elipseImageView2: CustomImageView = {
+    let secondElipseImageView: CustomImageView = {
         let iv = CustomImageView()
         iv.customEllipseImageViewSetup(iv: iv)
         return iv
     }()
     
-    let elipseImageView3: CustomImageView = {
+    let thirdElipseImageView: CustomImageView = {
         let iv = CustomImageView()
         iv.customEllipseImageViewSetup(iv: iv)
         return iv
     }()
     
-    let elipseImageView4: CustomImageView = {
+    let forthElipseImageView: CustomImageView = {
         let iv = CustomImageView()
         iv.customEllipseImageViewSetup(iv: iv)
         return iv
@@ -90,18 +90,9 @@ class PasswordResetView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(passwordResetLabel)
-        addSubview(passwordTextField)
-        addSubview(againPasswordTextField)
-        addSubview(nextButton)
-        addSubview(bigLetterLabel)
-        addSubview(numberLabel)
-        addSubview(specialLabel)
-        addSubview(matchLabel)
-        addSubview(elipseImageView1)
-        addSubview(elipseImageView2)
-        addSubview(elipseImageView3)
-        addSubview(elipseImageView4)
+        [passwordResetLabel,passwordTextField,againPasswordTextField,nextButton,bigLetterLabel,numberLabel,specialLabel,matchLabel,firstElipseImageView,secondElipseImageView,thirdElipseImageView,forthElipseImageView].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {
@@ -119,44 +110,44 @@ class PasswordResetView: BaseView {
             make.trailing.leading.equalToSuperview().inset(flexibleWidth(to: 20))
             make.height.equalTo(flexibleHeight(to: 60))
         }
-        elipseImageView1.snp.makeConstraints { make in
+        firstElipseImageView.snp.makeConstraints { make in
             make.top.equalTo(againPasswordTextField.snp.bottom).offset(flexibleHeight(to: 36))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.width.height.equalTo(9)
         }
         bigLetterLabel.snp.makeConstraints { make in
             make.top.equalTo(againPasswordTextField.snp.bottom).offset(flexibleHeight(to: 28))
-            make.leading.equalTo(elipseImageView1.snp.trailing).offset(flexibleWidth(to: 5))
+            make.leading.equalTo(firstElipseImageView.snp.trailing).offset(flexibleWidth(to: 5))
         }
         
-        elipseImageView2.snp.makeConstraints { make in
-            make.top.equalTo(elipseImageView1.snp.bottom).offset(flexibleHeight(to: 20))
+        secondElipseImageView.snp.makeConstraints { make in
+            make.top.equalTo(firstElipseImageView.snp.bottom).offset(flexibleHeight(to: 20))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.width.height.equalTo(9)
         }
         numberLabel.snp.makeConstraints { make in
             make.top.equalTo(bigLetterLabel.snp.bottom).offset(flexibleHeight(to: 8))
-            make.leading.equalTo(elipseImageView2.snp.trailing).offset(flexibleWidth(to: 5))
+            make.leading.equalTo(secondElipseImageView.snp.trailing).offset(flexibleWidth(to: 5))
         }
         
-        elipseImageView3.snp.makeConstraints { make in
-            make.top.equalTo(elipseImageView2.snp.bottom).offset(flexibleHeight(to: 20))
+        thirdElipseImageView.snp.makeConstraints { make in
+            make.top.equalTo(secondElipseImageView.snp.bottom).offset(flexibleHeight(to: 20))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.width.height.equalTo(9)
         }
         specialLabel.snp.makeConstraints { make in
             make.top.equalTo(numberLabel.snp.bottom).offset(flexibleHeight(to: 8))
-            make.leading.equalTo(elipseImageView3.snp.trailing).offset(flexibleWidth(to: 5))
+            make.leading.equalTo(thirdElipseImageView.snp.trailing).offset(flexibleWidth(to: 5))
         }
         
-        elipseImageView4.snp.makeConstraints { make in
-            make.top.equalTo(elipseImageView3.snp.bottom).offset(flexibleHeight(to: 20))
+        forthElipseImageView.snp.makeConstraints { make in
+            make.top.equalTo(thirdElipseImageView.snp.bottom).offset(flexibleHeight(to: 20))
             make.leading.equalToSuperview().offset(flexibleWidth(to: 20))
             make.width.height.equalTo(9)
         }
         matchLabel.snp.makeConstraints { make in
             make.top.equalTo(specialLabel.snp.bottom).offset(flexibleHeight(to: 8))
-            make.leading.equalTo(elipseImageView4.snp.trailing).offset(flexibleWidth(to: 5))
+            make.leading.equalTo(forthElipseImageView.snp.trailing).offset(flexibleWidth(to: 5))
         }
         nextButton.snp.makeConstraints { make in
             make.top.equalTo(matchLabel.snp.bottom).offset(flexibleHeight(to: 40))

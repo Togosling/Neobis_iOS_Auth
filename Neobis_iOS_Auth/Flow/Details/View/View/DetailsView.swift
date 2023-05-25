@@ -46,11 +46,9 @@ class DetailsView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(nameTextField)
-        addSubview(surnameTextField)
-        addSubview(dateOfBirthTextField)
-        addSubview(mailTextField)
-        addSubview(registerButton)
+        [nameTextField,surnameTextField,dateOfBirthTextField,mailTextField,registerButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

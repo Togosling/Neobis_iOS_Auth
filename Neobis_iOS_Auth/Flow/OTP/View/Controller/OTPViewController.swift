@@ -22,14 +22,13 @@ class OTPViewController: UIViewController {
     }
     
     func textFieldDelegate() {
-        otpView.passwordTextField4.delegate = self
+        otpView.forthPasswordTextField.delegate = self
     }
     
     func addTargets() {
-        otpView.passwordTextField1.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        otpView.passwordTextField2.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        otpView.passwordTextField3.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
-        otpView.passwordTextField4.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        [otpView.firstPasswordTextField,otpView.secondPasswordTextField,otpView.thirdPasswordTextField,otpView.forthPasswordTextField].forEach { textField in
+            textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        }
         otpView.backButton.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
     }
     
@@ -41,28 +40,28 @@ class OTPViewController: UIViewController {
         let text = textField.text
         if  text?.count == 1 {
             switch textField{
-            case otpView.passwordTextField1:
-                otpView.passwordTextField2.becomeFirstResponder()
-            case otpView.passwordTextField2:
-                otpView.passwordTextField3.becomeFirstResponder()
-            case otpView.passwordTextField3:
-                otpView.passwordTextField4.becomeFirstResponder()
-            case otpView.passwordTextField4:
-                otpView.passwordTextField4.resignFirstResponder()
+            case otpView.firstPasswordTextField:
+                otpView.secondPasswordTextField.becomeFirstResponder()
+            case otpView.secondPasswordTextField:
+                otpView.thirdPasswordTextField.becomeFirstResponder()
+            case otpView.thirdPasswordTextField:
+                otpView.forthPasswordTextField.becomeFirstResponder()
+            case otpView.forthPasswordTextField:
+                otpView.forthPasswordTextField.resignFirstResponder()
             default:
                 break
             }
         }
         if  text?.count == 0 {
             switch textField{
-            case otpView.passwordTextField1:
-                otpView.passwordTextField1.becomeFirstResponder()
-            case otpView.passwordTextField2:
-                otpView.passwordTextField1.becomeFirstResponder()
-            case otpView.passwordTextField3:
-                otpView.passwordTextField2.becomeFirstResponder()
-            case otpView.passwordTextField4:
-                otpView.passwordTextField3.becomeFirstResponder()
+            case otpView.firstPasswordTextField:
+                otpView.firstPasswordTextField.becomeFirstResponder()
+            case otpView.secondPasswordTextField:
+                otpView.firstPasswordTextField.becomeFirstResponder()
+            case otpView.thirdPasswordTextField:
+                otpView.secondPasswordTextField.becomeFirstResponder()
+            case otpView.forthPasswordTextField:
+                otpView.thirdPasswordTextField.becomeFirstResponder()
             default:
                 break
             }

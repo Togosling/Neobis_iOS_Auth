@@ -33,32 +33,32 @@ class OTPView: BaseView {
         return label
     }()
     
-    let passwordTextField1: CustomTextField = {
+    let firstPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.customOTPTextField(textField)
         return textField
     }()
     
-    let passwordTextField2: CustomTextField = {
+    let secondPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.customOTPTextField(textField)
         return textField
     }()
     
-    let passwordTextField3: CustomTextField = {
+    let thirdPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.customOTPTextField(textField)
         return textField
     }()
     
-    let passwordTextField4: CustomTextField = {
+    let forthPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.customOTPTextField(textField)
         return textField
     }()
     
     lazy var passwordTextFieldsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [passwordTextField1,passwordTextField2,passwordTextField3,passwordTextField4])
+        let stackView = UIStackView(arrangedSubviews: [firstPasswordTextField,secondPasswordTextField,thirdPasswordTextField,forthPasswordTextField])
         stackView.axis = .horizontal
         stackView.spacing = 5
         return stackView
@@ -92,14 +92,9 @@ class OTPView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(registerLabel)
-        addSubview(backButton)
-        addSubview(logoImageView)
-        addSubview(sentPasswordLabel)
-        addSubview(passwordTextFieldsStackView)
-        addSubview(requestAgain)
-        addSubview(circleProgressView)
-        addSubview(timeLabel)
+        [registerLabel,backButton,logoImageView,sentPasswordLabel,passwordTextFieldsStackView,requestAgain,circleProgressView,timeLabel].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

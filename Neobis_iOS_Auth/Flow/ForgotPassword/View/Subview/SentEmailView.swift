@@ -35,9 +35,9 @@ class SentEmailView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(logoImageView)
-        addSubview(infoLabel)
-        addSubview(closeButton)
+        [logoImageView,infoLabel,closeButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

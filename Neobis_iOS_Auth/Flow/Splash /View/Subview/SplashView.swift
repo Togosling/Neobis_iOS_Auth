@@ -40,10 +40,9 @@ class SplashView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(logoImageView)
-        addSubview(logoLabel)
-        addSubview(beginButton)
-        addSubview(loginButton)
+        [logoImageView,logoLabel,beginButton,loginButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

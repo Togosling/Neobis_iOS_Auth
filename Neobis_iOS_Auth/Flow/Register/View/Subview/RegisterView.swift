@@ -52,12 +52,9 @@ class RegisterView: BaseView {
     }
     
     override func setupViews() {
-        addSubview(registerLabel)
-        addSubview(backButton)
-        addSubview(logoLabel)
-        addSubview(logoImageView)
-        addSubview(mailTextField)
-        addSubview(nextButton)
+        [registerLabel,backButton,logoLabel,logoImageView,mailTextField,nextButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

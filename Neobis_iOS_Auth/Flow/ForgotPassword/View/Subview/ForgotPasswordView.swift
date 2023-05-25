@@ -52,12 +52,9 @@ class ForgotPasswordView: BaseView {
     }
         
     override func setupViews() {
-        addSubview(forgotPasswordLabel)
-        addSubview(backButton)
-        addSubview(logoLabel)
-        addSubview(logoImageView)
-        addSubview(mailTextField)
-        addSubview(nextButton)
+        [forgotPasswordLabel,backButton,logoLabel,logoImageView,mailTextField,nextButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {

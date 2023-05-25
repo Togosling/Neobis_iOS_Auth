@@ -47,11 +47,9 @@ class LoginView: BaseView {
     }
         
     override func setupViews() {
-        addSubview(logoImageView)
-        addSubview(mailTextField)
-        addSubview(passwordTextField)
-        addSubview(enterButton)
-        addSubview(forgotPasswordButton)
+        [logoImageView,mailTextField,passwordTextField,enterButton,forgotPasswordButton].forEach { subView in
+            addSubview(subView)
+        }
     }
     
     override func setupConstraints() {
