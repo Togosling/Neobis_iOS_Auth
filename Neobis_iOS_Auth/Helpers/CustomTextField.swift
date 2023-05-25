@@ -34,6 +34,7 @@ class CustomTextField: UITextField {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.27
         textField.attributedPlaceholder = NSMutableAttributedString(string: "0", attributes: [NSAttributedString.Key.kern: 0.36, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)])
+        textField.keyboardType = .numberPad
     }
     
     //MARK: FloatingTextField

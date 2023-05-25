@@ -70,6 +70,21 @@ class OTPView: BaseView {
         return label
     }()
     
+    let circleProgressView: CircularProgressView = {
+        let circle = CircularProgressView(frame: .init(x: 0, y: 0, width: 16, height: 16), lineWidth: 3, rounded: false)
+        circle.progressColor = UIColor(red: 0.287, green: 0.287, blue: 0.287, alpha: 1)
+        circle.trackColor = UIColor(red: 0.875, green: 0.878, blue: 0.898, alpha: 1)
+        circle.timeToFill = 60
+        circle.progress = 1
+        return circle
+    }()
+    
+    let timeLabel: CustomLabel = {
+        let label = CustomLabel()
+        label.customRequirmentsLabel(label: label, string: "00:58")
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super .init(frame: frame)
         
@@ -83,6 +98,8 @@ class OTPView: BaseView {
         addSubview(sentPasswordLabel)
         addSubview(passwordTextFieldsStackView)
         addSubview(requestAgain)
+        addSubview(circleProgressView)
+        addSubview(timeLabel)
     }
     
     override func setupConstraints() {
@@ -113,6 +130,14 @@ class OTPView: BaseView {
         requestAgain.snp.makeConstraints { make in
             make.top.equalTo(passwordTextFieldsStackView.snp.bottom).offset(flexibleHeight(to: 16))
             make.centerX.equalToSuperview()
+        }
+        circleProgressView.snp.makeConstraints { make in
+            make.top.equalTo(requestAgain.snp.bottom).offset(flexibleHeight(to: 8))
+            make.leading.equalToSuperview().offset(flexibleWidth(to: 152.5))
+        }
+        timeLabel.snp.makeConstraints { make in
+            make.top.equalTo(requestAgain.snp.bottom).offset(flexibleHeight(to: 4))
+            make.leading.equalTo(circleProgressView.snp.trailing).offset(flexibleWidth(to: 24))
         }
     }
     

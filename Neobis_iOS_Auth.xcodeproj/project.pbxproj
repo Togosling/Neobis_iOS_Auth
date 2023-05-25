@@ -33,6 +33,7 @@
 		F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */; };
 		F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */; };
 		F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */; };
+		F0CE10CB2A1F4BF300517EAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */; };
 		F0DC658E2A1B924B00341C08 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */; };
 		F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC658F2A1B925F00341C08 /* Coordinator.swift */; };
 		F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */; };
@@ -84,6 +85,7 @@
 		F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
 		F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
+		F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		F0DC658D2A1B924B00341C08 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F0DC658F2A1B925F00341C08 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F0DC65942A1B929C00341C08 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */,
 				F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */,
 				F0CE10BA2A1F206100517EAB /* CustomLabel.swift */,
+				F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */,
 				F0DC65A62A1B945F00341C08 /* SplashViewModel.swift in Sources */,
 				F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */,
+				F0CE10CB2A1F4BF300517EAB /* CircularProgressView.swift in Sources */,
 				F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
