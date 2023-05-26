@@ -17,7 +17,6 @@ class SentEmailView: BaseView {
     
     let infoLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customInfoLabel()
         return label
     }()
     

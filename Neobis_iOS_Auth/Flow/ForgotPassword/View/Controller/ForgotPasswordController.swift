@@ -45,6 +45,7 @@ class ForgotPasswordController: BaseViewController {
         forgotPasswordViewModel.completePasswordRecovery()
         
         view.applyBlurEffect()
+        sentEmailView.infoLabel.customInfoLabel(string: forgotPasswordView.mailTextField.text ?? "")
         view.addSubview(sentEmailView)
         sentEmailView.snp.makeConstraints { make in
             make.center.equalToSuperview()

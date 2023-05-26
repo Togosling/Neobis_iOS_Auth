@@ -24,8 +24,10 @@ class PasswordResetCoordinator: Coordinator {
     }
     
     func finishPasswordReset() {
-        //NEED OF REFACTORING
-        navigationController.popViewController(animated: true)
-        navigationController.popViewController(animated: true)
+        guard let vc = navigationController.viewControllers.last(where: { $0.isKind(of: LoginViewController.self) }) else {return}
+        if let vc = vc as? LoginViewController {
+            navigationController.popToViewController(vc, animated: true)
+            vc.showPasswordResetAllert()
+        }
     }
 }

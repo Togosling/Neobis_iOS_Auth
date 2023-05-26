@@ -15,6 +15,7 @@
 		F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */; };
 		F01E9E562A20A3CE00E9EE08 /* StringExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E552A20A3CE00E9EE08 /* StringExtansion.swift */; };
 		F01E9E582A20BEA900E9EE08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E572A20BEA900E9EE08 /* Colors.swift */; };
+		F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */; };
 		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
 		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
 		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
@@ -77,6 +78,7 @@
 		F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetCoordinator.swift; sourceTree = "<group>"; };
 		F01E9E552A20A3CE00E9EE08 /* StringExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtansion.swift; sourceTree = "<group>"; };
 		F01E9E572A20BEA900E9EE08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccesfullyView.swift; sourceTree = "<group>"; };
 		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				F0DC65BD2A1BA46E00341C08 /* LoginView.swift */,
+				F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				F0CE10B72A1F1B5C00517EAB /* CustomButton.swift in Sources */,
 				F0CE10BB2A1F206100517EAB /* CustomLabel.swift in Sources */,
 				F0DC65982A1B92C900341C08 /* FlexibleHeightWidth.swift in Sources */,
+				F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift in Sources */,
 				F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */,
 				F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,

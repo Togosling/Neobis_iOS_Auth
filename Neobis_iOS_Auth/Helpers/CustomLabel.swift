@@ -27,7 +27,7 @@ class CustomLabel: UILabel {
         self.attributedText = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.kern: -0.41, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
     
-    func customInfoLabel() {
+    func customInfoLabel(string: String) {
         self.textColor = UIColor(red: 0.162, green: 0.161, blue: 0.162, alpha: 1)
         self.font = UIFont(name: "GothamPro-Medium", size: 18)
         self.numberOfLines = 0
@@ -36,7 +36,7 @@ class CustomLabel: UILabel {
         paragraphStyle.lineHeightMultiple = 1.25
         let text = NSMutableAttributedString()
         text.append(NSAttributedString(string: "На вашу почту \n", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]))
-        text.append(NSAttributedString(string: "«dojacat01.gmail.com»", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 93/255, green: 95/255, blue: 239/255, alpha: 1)]))
+        text.append(NSAttributedString(string: "«\(string)»", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 93/255, green: 95/255, blue: 239/255, alpha: 1)]))
         text.append(NSAttributedString(string: " было \n отправлено письмо",attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle]))
         self.attributedText = text
         self.textAlignment = .center
@@ -55,5 +55,13 @@ class CustomLabel: UILabel {
         self.font = UIFont(name: "GothamPro-Medium", size: 20)
         self.textAlignment = .center
         self.text = "Мы отправили код на почту"
+    }
+    
+    func customResetPasswordLabel() {
+        self.textColor = UIColor(red: 0.162, green: 0.161, blue: 0.162, alpha: 1)
+        self.font = UIFont(name: "GothamPro-Medium", size: 16)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.25
+        self.attributedText = NSMutableAttributedString(string: "Пароль успешно сброшен!", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }
 }

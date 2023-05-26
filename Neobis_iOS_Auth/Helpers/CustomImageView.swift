@@ -16,4 +16,8 @@ class CustomImageView: UIImageView {
     func customEllipseImageViewSetup() {
         self.image = UIImage(named: "ellipse")
     }
+    
+    func customBellImageViewSetup() {
+        self.image = UIImage(named: "bell")
+    }
 }

@@ -11,10 +11,29 @@ class LoginViewController: BaseViewController {
     
     fileprivate let loginViewModel: LoginViewModelType
     fileprivate let loginView = LoginView()
+    fileprivate let passwordResetSuccesfullyView = PasswordResetSuccesfullyView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+        
+    func showPasswordResetAllert() {
+        let allertWidth = view.frame.width - 24
+        view.addSubview(passwordResetSuccesfullyView)
+        passwordResetSuccesfullyView.frame = .init(x: 12, y: -64, width: allertWidth, height: 64)
+        UIView.animate(withDuration: 1) {[weak self] in
+            self?.passwordResetSuccesfullyView.frame = .init(x: 12, y: 56, width: allertWidth, height: 64)
+        } completion: { _ in
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+                UIView.animate(withDuration: 1) {
+                    [weak self] in
+                    self?.passwordResetSuccesfullyView.frame = .init(x: 12, y: -64, width: allertWidth, height: 64)
+                } completion: { _ in
+                    self.passwordResetSuccesfullyView.removeFromSuperview()
+                }
+            }
+        }
     }
     
     override func addTargets() {
