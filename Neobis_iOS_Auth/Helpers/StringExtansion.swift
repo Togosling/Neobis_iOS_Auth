@@ -23,12 +23,3 @@ extension String {
         return passwordPredicate.evaluate(with: self)
     }
 }
-
-extension UITextField {
-    func isEmail() -> Bool {
-        return self.text?.isEmail() ?? false
-    }
-    func isPassword() -> Bool {
-        return self.text?.isPassword() ?? false
-    }
-}

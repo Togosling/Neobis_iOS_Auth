@@ -111,11 +111,36 @@ class CustomTextField: UITextField {
         }
     }
     
+    func isEmail() -> Bool {
+        return self.text?.isEmail() ?? false
+    }
+    func isPassword() -> Bool {
+        return self.text?.isPassword() ?? false
+    }
+    
     func hasUpperCaseLetters() -> Bool {
         guard let text = self.text else {
             return false
         }
         let regex = try! NSRegularExpression(pattern: "[A-Z]")
+        let matches = regex.matches(in: text, range: NSRange(text.startIndex..., in: text))
+        return !matches.isEmpty
+    }
+    
+    func hasNumbers() -> Bool {
+        guard let text = self.text else {
+            return false
+        }
+        let regex = try! NSRegularExpression(pattern: "[0-9]")
+        let matches = regex.matches(in: text, range: NSRange(text.startIndex..., in: text))
+        return !matches.isEmpty
+    }
+    
+    func hasSpecialSymbols() -> Bool {
+        guard let text = self.text else {
+            return false
+        }
+        let regex = try! NSRegularExpression(pattern: "[$@$!%*?&#]")
         let matches = regex.matches(in: text, range: NSRange(text.startIndex..., in: text))
         return !matches.isEmpty
     }

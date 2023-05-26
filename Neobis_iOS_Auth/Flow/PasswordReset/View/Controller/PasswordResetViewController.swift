@@ -32,18 +32,30 @@ class PasswordResetViewController: BaseViewController {
             passwordResetView.firstElipseImageView.image = UIImage(named: "ellipse")
         }
         
-//        if passwordResetView.passwordTextField.text?.hasNumbers() == true {
-//            passwordResetView.numberLabel.textColor = blue
-//            passwordResetView.secondElipseImageView.image = UIImage(named: "blueEllipse")
-//        } else {
-//            passwordResetView.numberLabel.textColor = gray
-//            passwordResetView.secondElipseImageView.image = UIImage(named: "ellipse")
-//        }
+        if passwordResetView.passwordTextField.hasNumbers() {
+            passwordResetView.numberLabel.textColor = blue
+            passwordResetView.secondElipseImageView.image = UIImage(named: "blueEllipse")
+        } else {
+            passwordResetView.numberLabel.textColor = gray
+            passwordResetView.secondElipseImageView.image = UIImage(named: "ellipse")
+        }
+        
+        if passwordResetView.passwordTextField.hasSpecialSymbols() {
+            passwordResetView.specialLabel.textColor = blue
+            passwordResetView.thirdElipseImageView.image = UIImage(named: "blueEllipse")
+        } else {
+            passwordResetView.specialLabel.textColor = gray
+            passwordResetView.thirdElipseImageView.image = UIImage(named: "ellipse")
+        }
         
         if passwordResetView.passwordTextField.isPassword() && passwordResetView.againPasswordTextField.isPassword() && passwordResetView.passwordTextField.text == passwordResetView.againPasswordTextField.text {
             passwordResetView.nextButton.customProceedEnabledButtonSetup(string: passwordResetView.nextButton.currentTitle ?? "")
+            passwordResetView.matchLabel.textColor = blue
+            passwordResetView.forthElipseImageView.image = UIImage(named: "blueEllipse")
         } else {
             passwordResetView.nextButton.customProceedDisabledButtonSetup(string: passwordResetView.nextButton.currentTitle ?? "")
+            passwordResetView.matchLabel.textColor = gray
+            passwordResetView.forthElipseImageView.image = UIImage(named: "ellipse")
         }
     }
     
