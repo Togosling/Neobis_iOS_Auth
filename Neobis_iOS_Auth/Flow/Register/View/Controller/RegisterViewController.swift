@@ -20,6 +20,15 @@ class RegisterViewController: BaseViewController {
     override func addTargets() {
         registerView.backButton.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
         registerView.nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
+        registerView.mailTextField.addTarget(self, action: #selector(mailValidation), for: .editingChanged)
+    }
+    
+    @objc fileprivate func mailValidation() {
+        if registerView.mailTextField.isEmail() {
+            registerView.nextButton.customProceedEnabledButtonSetup(string: registerView.nextButton.currentTitle ?? "")
+        } else {
+            registerView.nextButton.customProceedDisabledButtonSetup(string: registerView.nextButton.currentTitle ?? "")
+        }
     }
     
     @objc fileprivate func handleNext() {

@@ -11,25 +11,25 @@ class SplashView: BaseView {
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customLogoImageViewSetup(iv: iv)
+        iv.customLogoImageViewSetup()
         return iv
     }()
     
     let logoLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customLogoLabel(label: label)
+        label.customLogoLabel()
         return label
     }()
     
     let beginButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customProceedButtonSetup(button: button, string: "Начать пользоваться")
+        button.customProceedEnabledButtonSetup(string: "Начать пользоваться")
         return button
     }()
     
     let loginButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customBottomButtonSetup(button: button, string: "Есть аккаунт? Войти")
+        button.customBottomButtonSetup(string: "Есть аккаунт? Войти")
         return button
     }()
     

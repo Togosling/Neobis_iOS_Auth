@@ -20,8 +20,18 @@ class LoginViewController: BaseViewController {
     override func addTargets() {
         loginView.enterButton.addTarget(self, action: #selector(handleEnter), for: .touchUpInside)
         loginView.forgotPasswordButton.addTarget(self, action: #selector(handleForgotPassword), for: .touchUpInside)
+        loginView.mailTextField.addTarget(self, action: #selector(validation), for: .editingChanged)
+        loginView.passwordTextField.addTarget(self, action: #selector(validation), for: .editingChanged)
     }
     
+    @objc fileprivate func validation() {
+        if loginView.mailTextField.isEmail() && loginView.passwordTextField.isPassword() {
+            loginView.enterButton.customProceedEnabledButtonSetup(string: loginView.enterButton.currentTitle ?? "")
+        } else {
+            loginView.enterButton.customProceedDisabledButtonSetup(string: loginView.enterButton.currentTitle ?? "")
+        }
+    }
+        
     @objc fileprivate func handleEnter() {
         loginViewModel.gotoMain()
     }

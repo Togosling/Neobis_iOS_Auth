@@ -11,19 +11,19 @@ class SentEmailView: BaseView {
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customLogoImageViewSetup(iv: iv)
+        iv.customLogoImageViewSetup()
         return iv
     }()
     
     let infoLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customInfoLabel(label: label)
+        label.customInfoLabel()
         return label
     }()
     
     let closeButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customProceedButtonSetup(button: button, string: "Закрыть")
+        button.customProceedEnabledButtonSetup(string: "Закрыть")
         return button
     }()
     

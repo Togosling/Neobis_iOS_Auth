@@ -8,25 +8,35 @@
 import UIKit
 
 class CustomButton: UIButton {
-    
-    func customProceedButtonSetup(button: UIButton, string: String) {
-        button.backgroundColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
-        button.setTitleColor( .white, for: .normal)
-        button.setTitle(string, for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
-        button.layer.cornerRadius = 16
+        
+    func customProceedDisabledButtonSetup(string: String) {
+        self.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
+        self.setTitleColor( UIColor(red: 0.612, green: 0.643, blue: 0.671, alpha: 1), for: .normal)
+        self.setTitle(string, for: .normal)
+        self.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
+        self.layer.cornerRadius = 16
+        self.isEnabled = false
     }
     
-    func customBackButtonSetup(button: UIButton) {
-        button.setImage(UIImage(named: "back"), for: .normal)
-        button.tintColor = .black
-        button.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.2)
-        button.layer.cornerRadius = 12
+    func customProceedEnabledButtonSetup(string: String) {
+        self.backgroundColor = UIColor(red: 0.365, green: 0.373, blue: 0.937, alpha: 1)
+        self.setTitleColor(.white, for: .normal)
+        self.setTitle(string, for: .normal)
+        self.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
+        self.layer.cornerRadius = 16
+        self.isEnabled = true
     }
     
-    func customBottomButtonSetup(button: UIButton, string: String) {
-        button.setTitle(string, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
+    func customBackButtonSetup() {
+        self.setImage(UIImage(named: "back"), for: .normal)
+        self.tintColor = .black
+        self.backgroundColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 0.2)
+        self.layer.cornerRadius = 12
+    }
+    
+    func customBottomButtonSetup(string: String) {
+        self.setTitle(string, for: .normal)
+        self.setTitleColor(.black, for: .normal)
+        self.titleLabel?.font = UIFont(name: "GothamPro-Black", size: 16)
     }
 }

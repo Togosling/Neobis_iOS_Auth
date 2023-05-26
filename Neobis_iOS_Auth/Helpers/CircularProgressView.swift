@@ -9,7 +9,6 @@ import UIKit
 
 class CircularProgressView: UIView {
     
-    
     fileprivate var progressLayer = CAShapeLayer()
     fileprivate var trackLayer = CAShapeLayer()
     fileprivate var didConfigureLabel = false

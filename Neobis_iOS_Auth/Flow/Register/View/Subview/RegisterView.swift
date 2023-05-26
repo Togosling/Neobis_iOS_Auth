@@ -11,37 +11,37 @@ class RegisterView: BaseView {
     
     let registerLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customTopLabel(label: label, string: "Регистрация")
+        label.customTopLabel(string: "Регистрация")
         return label
     }()
     
     let backButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customBackButtonSetup(button: button)
+        button.customBackButtonSetup()
         return button
     }()
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customLogoImageViewSetup(iv: iv)
+        iv.customLogoImageViewSetup()
         return iv
     }()
     
     let logoLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customLogoLabel(label: label)
+        label.customLogoLabel()
         return label
     }()
     
     let mailTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Электронная почта")
+        textField.customTextFieldSetup(string: "Электронная почта")
         return textField
     }()
     
     let nextButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customProceedButtonSetup(button: button, string: "Далее")
+        button.customProceedDisabledButtonSetup(string: "Далее")
         return button
     }()
     

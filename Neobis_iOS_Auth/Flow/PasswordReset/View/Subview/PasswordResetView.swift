@@ -11,75 +11,75 @@ class PasswordResetView: BaseView {
     
     let passwordResetLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customTopLabel(label: label, string: "Сброс пароля")
+        label.customTopLabel(string: "Сброс пароля")
         return label
     }()
     
     let passwordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Придумайте пароль")
-        textField.addButtontoTextField(textField)
+        textField.customTextFieldSetup(string: "Придумайте пароль")
+        textField.addButtontoTextField()
         return textField
     }()
     
     let againPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Повторите пароль")
-        textField.addButtontoTextField(textField)
+        textField.customTextFieldSetup(string: "Повторите пароль")
+        textField.addButtontoTextField()
         return textField
     }()
     
     let nextButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customProceedButtonSetup(button: button, string: "Далее")
+        button.customProceedDisabledButtonSetup(string: "Далее")
         return button
     }()
     
     let bigLetterLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "Заглавная буква")
+        label.customRequirmentsLabel(string: "Заглавная буква")
         return label
     }()
     
     let numberLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "Цифры")
+        label.customRequirmentsLabel(string: "Цифры")
         return label
     }()
     
     let specialLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "Специальные символы")
+        label.customRequirmentsLabel(string: "Специальные символы")
         return label
     }()
     
     let matchLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "Совпадение пароля")
+        label.customRequirmentsLabel(string: "Совпадение пароля")
         return label
     }()
     
     let firstElipseImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customEllipseImageViewSetup(iv: iv)
+        iv.customEllipseImageViewSetup()
         return iv
     }()
     
     let secondElipseImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customEllipseImageViewSetup(iv: iv)
+        iv.customEllipseImageViewSetup()
         return iv
     }()
     
     let thirdElipseImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customEllipseImageViewSetup(iv: iv)
+        iv.customEllipseImageViewSetup()
         return iv
     }()
     
     let forthElipseImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customEllipseImageViewSetup(iv: iv)
+        iv.customEllipseImageViewSetup()
         return iv
     }()
     

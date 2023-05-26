@@ -11,32 +11,32 @@ class LoginView: BaseView {
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customLogoImageViewSetup(iv: iv)
+        iv.customLogoImageViewSetup()
         return iv
     }()
     
     let mailTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Электронная почта")
+        textField.customTextFieldSetup(string: "Электронная почта")
         return textField
     }()
     
     let passwordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Пароль")
-        textField.addButtontoTextField(textField)
+        textField.customTextFieldSetup( string: "Пароль")
+        textField.addButtontoTextField()
         return textField
     }()
     
     let enterButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customProceedButtonSetup(button: button, string: "Войти")
+        button.customProceedDisabledButtonSetup(string: "Войти")
         return button
     }()
     
     let forgotPasswordButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customBottomButtonSetup(button: button, string: "Забыли пароль?")
+        button.customBottomButtonSetup(string: "Забыли пароль?")
         return button
     }()
                 

@@ -18,61 +18,62 @@ class CustomTextField: UITextField {
         return bounds.insetBy(dx: 10, dy: 0)
     }
     
-    func customTextFieldSetup(_ textField: UITextField, string: String) {
-        textField.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Medium", size: 16)
+    //MARK: CustomTextFields Setup
+    func customTextFieldSetup(string: String) {
+        self.backgroundColor = UIColor(red: 0.969, green: 0.969, blue: 0.973, alpha: 1)
+        self.textColor = .black
+        self.font = UIFont(name: "GothamPro-Medium", size: 16)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.25
-        textField.attributedPlaceholder = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
-        textField.layer.cornerRadius = 8
+        self.attributedPlaceholder = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
+        self.layer.cornerRadius = 8
     }
     
-    func customOTPTextField(_ textField: UITextField) {
-        textField.textColor = .black
-        textField.font = UIFont(name: "GothamPro-Black", size: 28)
+    func customOTPTextField() {
+        self.textColor = .black
+        self.font = UIFont(name: "GothamPro-Black", size: 28)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.27
-        textField.attributedPlaceholder = NSMutableAttributedString(string: "0", attributes: [NSAttributedString.Key.kern: 0.36, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)])
-        textField.keyboardType = .numberPad
+        self.attributedPlaceholder = NSMutableAttributedString(string: "0", attributes: [NSAttributedString.Key.kern: 0.36, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)])
+        self.keyboardType = .numberPad
     }
-    
+        
     //MARK: FloatingTextField
-    func addPlaceHolder(_ textField: UITextField) {
-        guard let placeholder = textField.placeholder else {return}
+    func addPlaceHolder() {
+        guard let placeholder = self.placeholder else {return}
         let label = UILabel()
         label.isHidden = true
         label.text = placeholder
         label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
         label.font = UIFont(name: "GothamPro-Medium", size: 16)
         label.sizeToFit()
-        textField.addSubview(label)
-        label.center = textField.convert(textField.center, from: textField.superview)
+        self.addSubview(label)
+        label.center = self.convert(self.center, from: self.superview)
         label.frame.origin.x = 10
-        textField.addTarget(self, action: #selector(handleChange), for: .editingChanged)
+        self.addTarget(self, action: #selector(handleChange), for: .editingChanged)
     }
     
-    @objc func handleChange(_ textField: UITextField) {
+    @objc func handleChange() {
         var label = UILabel()
 
-        for subView in textField.subviews {
+        for subView in self.subviews {
             if let tmpLabel = subView as? UILabel {
                 label = tmpLabel
             }
         }
 
         UIView.animate(withDuration: 0.3) {
-            if textField.text?.count == 0 {
-                label.center = textField.convert(textField.center, from: textField.superview)
+            if self.text?.count == 0 {
+                label.center = self.convert(self.center, from: self.superview)
                 label.frame.origin.x = 10
-                textField.subviews.forEach { subView in
+                self.subviews.forEach { subView in
                     if let subView = subView as? UILabel {
                         subView.isHidden = true
                     }
                 }
             } else {
                 label.isHidden = false
-                label.frame.origin.y = textField.bounds.origin.y + 5.0
+                label.frame.origin.y = self.bounds.origin.y + 5.0
                 label.textColor = UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)
                 label.font = UIFont(name: "GothamPro-Medium", size: 12)
             }
@@ -89,10 +90,10 @@ class CustomTextField: UITextField {
         return button
     }()
     
-    func addButtontoTextField(_ textField: UITextField) {
-        textField.rightView = showPasswordButton
-        textField.rightViewMode = .always
-        textField.isSecureTextEntry = true
+    func addButtontoTextField() {
+        self.rightView = showPasswordButton
+        self.rightViewMode = .always
+        self.isSecureTextEntry = true
         showPasswordButton.addTarget(self, action: #selector(handleShowPassword), for: .touchUpInside)
     }
     
@@ -108,5 +109,14 @@ class CustomTextField: UITextField {
                 textField.isSecureTextEntry = true
             }
         }
+    }
+    
+    func hasUpperCaseLetters() -> Bool {
+        guard let text = self.text else {
+            return false
+        }
+        let regex = try! NSRegularExpression(pattern: "[A-Z]")
+        let matches = regex.matches(in: text, range: NSRange(text.startIndex..., in: text))
+        return !matches.isEmpty
     }
 }

@@ -13,6 +13,8 @@
 		F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A29492A1E2AFD00211F7C /* PasswordResetViewController.swift */; };
 		F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294B2A1E2B4F00211F7C /* PasswordResetViewModel.swift */; };
 		F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */; };
+		F01E9E562A20A3CE00E9EE08 /* ValidationExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E552A20A3CE00E9EE08 /* ValidationExtansion.swift */; };
+		F01E9E582A20BEA900E9EE08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E572A20BEA900E9EE08 /* Colors.swift */; };
 		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
 		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
 		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
@@ -73,6 +75,8 @@
 		F01A29492A1E2AFD00211F7C /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		F01A294B2A1E2B4F00211F7C /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
 		F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetCoordinator.swift; sourceTree = "<group>"; };
+		F01E9E552A20A3CE00E9EE08 /* ValidationExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationExtansion.swift; sourceTree = "<group>"; };
+		F01E9E572A20BEA900E9EE08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -496,14 +500,16 @@
 		F0DC65962A1B92AC00341C08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */,
 				F0DC65972A1B92C900341C08 /* FlexibleHeightWidth.swift */,
-				F0DC659A2A1B92E800341C08 /* Bindable.swift */,
+				F01E9E552A20A3CE00E9EE08 /* ValidationExtansion.swift */,
+				F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */,
 				F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */,
 				F0DC65BF2A1BA66000341C08 /* CustomTextField.swift */,
 				F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */,
-				F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */,
 				F0CE10BA2A1F206100517EAB /* CustomLabel.swift */,
-				F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */,
+				F0DC659A2A1B92E800341C08 /* Bindable.swift */,
+				F01E9E572A20BEA900E9EE08 /* Colors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 				F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */,
 				F0CE10EB2A1F830C00517EAB /* CreatePasswordCoordinator.swift in Sources */,
 				F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */,
+				F01E9E562A20A3CE00E9EE08 /* ValidationExtansion.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
 				F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */,
@@ -831,6 +838,7 @@
 				F0CE10E92A1F827000517EAB /* CreatePasswordViewController.swift in Sources */,
 				F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */,
 				F0DC65B82A1BA2E600341C08 /* LoginViewModel.swift in Sources */,
+				F01E9E582A20BEA900E9EE08 /* Colors.swift in Sources */,
 				F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */,
 				F0DC65AA2A1B95D500341C08 /* SplashView.swift in Sources */,
 				F0E3C3F62A1B52D10084C651 /* AppDelegate.swift in Sources */,

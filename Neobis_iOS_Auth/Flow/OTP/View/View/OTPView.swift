@@ -11,49 +11,49 @@ class OTPView: BaseView {
     
     let registerLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customTopLabel(label: label, string: "Регистрация")
+        label.customTopLabel(string: "Регистрация")
         return label
     }()
     
     let backButton: CustomButton = {
         let button = CustomButton(type: .system)
-        button.customBackButtonSetup(button: button)
+        button.customBackButtonSetup()
         return button
     }()
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
-        iv.customLogoImageViewSetup(iv: iv)
+        iv.customLogoImageViewSetup()
         return iv
     }()
     
     let sentPasswordLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customSentPasswordLabel(label: label)
+        label.customSentPasswordLabel()
         return label
     }()
     
     let firstPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customOTPTextField(textField)
+        textField.customOTPTextField()
         return textField
     }()
     
     let secondPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customOTPTextField(textField)
+        textField.customOTPTextField()
         return textField
     }()
     
     let thirdPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customOTPTextField(textField)
+        textField.customOTPTextField()
         return textField
     }()
     
     let forthPasswordTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customOTPTextField(textField)
+        textField.customOTPTextField()
         return textField
     }()
     
@@ -66,7 +66,7 @@ class OTPView: BaseView {
     
     let requestAgain: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "Повторный запрос")
+        label.customRequirmentsLabel(string: "Повторный запрос")
         return label
     }()
     
@@ -81,7 +81,7 @@ class OTPView: BaseView {
     
     let timeLabel: CustomLabel = {
         let label = CustomLabel()
-        label.customRequirmentsLabel(label: label, string: "00:58")
+        label.customRequirmentsLabel(string: "00:58")
         return label
     }()
     

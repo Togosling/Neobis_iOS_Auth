@@ -20,7 +20,16 @@ class ForgotPasswordController: BaseViewController {
     override func addTargets() {
         forgotPasswordView.nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         forgotPasswordView.backButton.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
+        forgotPasswordView.mailTextField.addTarget(self, action: #selector(mailValidation), for: .editingChanged)
         sentEmailView.closeButton.addTarget(self, action: #selector(handleClose), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func mailValidation() {
+        if forgotPasswordView.mailTextField.isEmail() {
+            forgotPasswordView.nextButton.customProceedEnabledButtonSetup(string: forgotPasswordView.nextButton.currentTitle ?? "")
+        } else {
+            forgotPasswordView.nextButton.customProceedDisabledButtonSetup(string: forgotPasswordView.nextButton.currentTitle ?? "")
+        }
     }
     
     @objc fileprivate func handleClose() {

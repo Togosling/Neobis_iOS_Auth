@@ -37,6 +37,6 @@ class BaseViewController: UIViewController, UITextFieldDelegate {
         
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let textField = textField as? CustomTextField else {return}
-        textField.addPlaceHolder(textField)
+        textField.addPlaceHolder()
     }
 }

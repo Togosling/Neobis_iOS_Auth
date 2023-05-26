@@ -11,31 +11,31 @@ class DetailsView: BaseView {
     
     let nameTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Имя")
+        textField.customTextFieldSetup(string: "Имя")
         return textField
     }()
     
     let surnameTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Фамилия")
+        textField.customTextFieldSetup(string: "Фамилия")
         return textField
     }()
     
     let dateOfBirthTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "День рождения")
+        textField.customTextFieldSetup(string: "День рождения")
         return textField
     }()
     
     let mailTextField: CustomTextField = {
         let textField = CustomTextField()
-        textField.customTextFieldSetup(textField, string: "Электронная почта")
+        textField.customTextFieldSetup(string: "Электронная почта")
         return textField
     }()
     
     let registerButton: CustomButton = {
         let button = CustomButton()
-        button.customProceedButtonSetup(button: button, string: "Зарегистрироваться")
+        button.customProceedDisabledButtonSetup(string: "Зарегистрироваться")
         return button
     }()
     

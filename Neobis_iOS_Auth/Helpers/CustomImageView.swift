@@ -9,11 +9,11 @@ import UIKit
 
 class CustomImageView: UIImageView {
     
-    func customLogoImageViewSetup(iv: UIImageView) {
-        iv.image = UIImage(named: "smile")
+    func customLogoImageViewSetup() {
+        self.image = UIImage(named: "smile")
     }
     
-    func customEllipseImageViewSetup(iv: UIImageView) {
-        iv.image = UIImage(named: "ellipse")
+    func customEllipseImageViewSetup() {
+        self.image = UIImage(named: "ellipse")
     }
 }
