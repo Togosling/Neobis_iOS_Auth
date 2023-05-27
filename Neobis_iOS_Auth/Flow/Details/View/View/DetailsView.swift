@@ -24,6 +24,8 @@ class DetailsView: BaseView {
     let dateOfBirthTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.customTextFieldSetup(string: "День рождения")
+        textField.keyboardType = .numberPad
+        textField.tag = 1
         return textField
     }()
     

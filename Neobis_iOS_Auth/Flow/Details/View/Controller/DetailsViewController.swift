@@ -19,17 +19,27 @@ class DetailsViewController: BaseViewController {
     
     override func addTargets() {
         detailsView.registerButton.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        [detailsView.mailTextField, detailsView.nameTextField, detailsView.surnameTextField, detailsView.dateOfBirthTextField].forEach { textField in
+            textField.addTarget(self, action: #selector(validation), for: .editingChanged)
+        }
     }
     
-    @objc func handleRegister() {
+    @objc fileprivate func validation() {
+        if detailsView.nameTextField.hasText && detailsView.surnameTextField.hasText && detailsView.dateOfBirthTextField.text?.count == 8 && detailsView.mailTextField.isEmail(){
+            detailsView.registerButton.customProceedEnabledButtonSetup(string: detailsView.registerButton.currentTitle ?? "")
+        } else {
+            detailsView.registerButton.customProceedDisabledButtonSetup(string: detailsView.registerButton.currentTitle ?? "")
+        }
+    }
+    
+    @objc fileprivate func handleRegister() {
         detailsViewModel.gotoCreatePassword()
     }
     
     override func textFieldDelegate() {
-        detailsView.mailTextField.delegate = self
-        detailsView.nameTextField.delegate = self
-        detailsView.surnameTextField.delegate = self
-        detailsView.dateOfBirthTextField.delegate = self
+        [detailsView.mailTextField, detailsView.nameTextField, detailsView.surnameTextField, detailsView.dateOfBirthTextField].forEach { textField in
+            textField.delegate = self
+        }
     }
             
     override func setupViews() {
