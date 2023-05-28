@@ -15,7 +15,7 @@
 		F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */; };
 		F01E9E562A20A3CE00E9EE08 /* StringExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E552A20A3CE00E9EE08 /* StringExtansion.swift */; };
 		F01E9E582A20BEA900E9EE08 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E572A20BEA900E9EE08 /* Colors.swift */; };
-		F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */; };
+		F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyAllertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyAllertView.swift */; };
 		F0A95D512A1C8514008D6414 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D502A1C8514008D6414 /* RegisterViewController.swift */; };
 		F0A95D532A1C8535008D6414 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */; };
 		F0A95D552A1C85A6008D6414 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */; };
@@ -26,17 +26,12 @@
 		F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D662A1CE010008D6414 /* ForgotPasswordController.swift */; };
 		F0A95D692A1CE056008D6414 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D682A1CE056008D6414 /* ForgotPasswordViewModel.swift */; };
 		F0A95D6B2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6A2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift */; };
-		F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */; };
+		F0A95D6E2A1CF4CC008D6414 /* SentEmailAllertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6D2A1CF4CC008D6414 /* SentEmailAllertView.swift */; };
 		F0A95D702A1CF51E008D6414 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D6F2A1CF51E008D6414 /* BaseView.swift */; };
 		F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */; };
 		F0CE10B72A1F1B5C00517EAB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */; };
 		F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */; };
 		F0CE10BB2A1F206100517EAB /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10BA2A1F206100517EAB /* CustomLabel.swift */; };
-		F0CE10C32A1F2BAB00517EAB /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C22A1F2BAB00517EAB /* OTPView.swift */; };
-		F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */; };
-		F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */; };
-		F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */; };
-		F0CE10CB2A1F4BF300517EAB /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */; };
 		F0CE10D32A1F586200517EAB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D22A1F586200517EAB /* DetailsView.swift */; };
 		F0CE10D52A1F588000517EAB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D42A1F588000517EAB /* DetailsViewController.swift */; };
 		F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */; };
@@ -78,7 +73,7 @@
 		F01A294D2A1E2C9900211F7C /* PasswordResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetCoordinator.swift; sourceTree = "<group>"; };
 		F01E9E552A20A3CE00E9EE08 /* StringExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtansion.swift; sourceTree = "<group>"; };
 		F01E9E572A20BEA900E9EE08 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccesfullyView.swift; sourceTree = "<group>"; };
+		F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyAllertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetSuccesfullyAllertView.swift; sourceTree = "<group>"; };
 		F0A95D502A1C8514008D6414 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F0A95D522A1C8535008D6414 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F0A95D542A1C85A6008D6414 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
@@ -89,17 +84,12 @@
 		F0A95D662A1CE010008D6414 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		F0A95D682A1CE056008D6414 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		F0A95D6A2A1CE1CB008D6414 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
-		F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentEmailView.swift; sourceTree = "<group>"; };
+		F0A95D6D2A1CF4CC008D6414 /* SentEmailAllertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentEmailAllertView.swift; sourceTree = "<group>"; };
 		F0A95D6F2A1CF51E008D6414 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F0CE10B62A1F1B5C00517EAB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		F0CE10BA2A1F206100517EAB /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		F0CE10C22A1F2BAB00517EAB /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
-		F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
-		F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
-		F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
-		F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		F0CE10D22A1F586200517EAB /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		F0CE10D42A1F588000517EAB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F0CE10D62A1F58E700517EAB /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
@@ -300,60 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				F0A95D642A1CDFE8008D6414 /* ForgotPasswordView.swift */,
-				F0A95D6D2A1CF4CC008D6414 /* SentEmailView.swift */,
 			);
 			path = Subview;
-			sourceTree = "<group>";
-		};
-		F0CE10BC2A1F2B3000517EAB /* OTP */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10BD2A1F2B7300517EAB /* Coordinator */,
-				F0CE10BE2A1F2B7900517EAB /* ViewModel */,
-				F0CE10BF2A1F2B7E00517EAB /* View */,
-			);
-			path = OTP;
-			sourceTree = "<group>";
-		};
-		F0CE10BD2A1F2B7300517EAB /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10C82A1F2C9400517EAB /* OTPCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		F0CE10BE2A1F2B7900517EAB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10C62A1F2C3500517EAB /* OTPViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F0CE10BF2A1F2B7E00517EAB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10C02A1F2B8700517EAB /* Controller */,
-				F0CE10C12A1F2B8F00517EAB /* View */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F0CE10C02A1F2B8700517EAB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10C42A1F2BDB00517EAB /* OTPViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F0CE10C12A1F2B8F00517EAB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F0CE10C22A1F2BAB00517EAB /* OTPView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		F0CE10CC2A1F57E800517EAB /* Details */ = {
@@ -475,7 +413,6 @@
 				F0DC65B02A1BA0DA00341C08 /* Register */,
 				F0A95D5E2A1CDF92008D6414 /* ForgotPassword */,
 				F01A29412A1E27F300211F7C /* PasswordReset */,
-				F0CE10BC2A1F2B3000517EAB /* OTP */,
 				F0CE10CC2A1F57E800517EAB /* Details */,
 				F0CE10DA2A1F7FED00517EAB /* CreatePassword */,
 			);
@@ -502,7 +439,8 @@
 		F0DC65962A1B92AC00341C08 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F0CE10CA2A1F4BF300517EAB /* CircularProgressView.swift */,
+				F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyAllertView.swift */,
+				F0A95D6D2A1CF4CC008D6414 /* SentEmailAllertView.swift */,
 				F0DC65972A1B92C900341C08 /* FlexibleHeightWidth.swift */,
 				F0CE10B82A1F1F4B00517EAB /* CustomImageView.swift */,
 				F0A95D712A1CF98C008D6414 /* UIViewExtension.swift */,
@@ -643,7 +581,6 @@
 			isa = PBXGroup;
 			children = (
 				F0DC65BD2A1BA46E00341C08 /* LoginView.swift */,
-				F01E9E592A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -811,23 +748,20 @@
 				F0CE10B72A1F1B5C00517EAB /* CustomButton.swift in Sources */,
 				F0CE10BB2A1F206100517EAB /* CustomLabel.swift in Sources */,
 				F0DC65982A1B92C900341C08 /* FlexibleHeightWidth.swift in Sources */,
-				F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyView.swift in Sources */,
+				F01E9E5A2A20E35200E9EE08 /* PasswordResetSuccesfullyAllertView.swift in Sources */,
 				F01A294C2A1E2B4F00211F7C /* PasswordResetViewModel.swift in Sources */,
 				F0CE10B92A1F1F4B00517EAB /* CustomImageView.swift in Sources */,
 				F0A95D672A1CE010008D6414 /* ForgotPasswordController.swift in Sources */,
 				F0CE10D72A1F58E700517EAB /* DetailsViewModel.swift in Sources */,
 				F0CE10E72A1F822700517EAB /* CreatePasswordView.swift in Sources */,
-				F0CE10C92A1F2C9400517EAB /* OTPCoordinator.swift in Sources */,
 				F0DC659B2A1B92E800341C08 /* Bindable.swift in Sources */,
 				F0DC65A82A1B94ED00341C08 /* SplashCoordinator.swift in Sources */,
-				F0CE10C72A1F2C3500517EAB /* OTPViewModel.swift in Sources */,
-				F0CE10C52A1F2BDB00517EAB /* OTPViewController.swift in Sources */,
 				F0CE10EB2A1F830C00517EAB /* CreatePasswordCoordinator.swift in Sources */,
 				F01A29482A1E29BF00211F7C /* PasswordResetView.swift in Sources */,
 				F01E9E562A20A3CE00E9EE08 /* StringExtansion.swift in Sources */,
 				F0DC65B62A1BA2A400341C08 /* LoginCoordinator.swift in Sources */,
 				F0A95D5B2A1C941E008D6414 /* BaseViewController.swift in Sources */,
-				F0A95D6E2A1CF4CC008D6414 /* SentEmailView.swift in Sources */,
+				F0A95D6E2A1CF4CC008D6414 /* SentEmailAllertView.swift in Sources */,
 				F0CE10D92A1F595200517EAB /* DetailsCoordinator.swift in Sources */,
 				F0DC65952A1B929C00341C08 /* BaseNavigationController.swift in Sources */,
 				F0DC65902A1B925F00341C08 /* Coordinator.swift in Sources */,
@@ -836,7 +770,6 @@
 				F01A294A2A1E2AFD00211F7C /* PasswordResetViewController.swift in Sources */,
 				F0DC65A22A1B940700341C08 /* SplashViewController.swift in Sources */,
 				F0A95D572A1C8692008D6414 /* RegisterView.swift in Sources */,
-				F0CE10C32A1F2BAB00517EAB /* OTPView.swift in Sources */,
 				F0A95D722A1CF98C008D6414 /* UIViewExtension.swift in Sources */,
 				F0DC65BE2A1BA46E00341C08 /* LoginView.swift in Sources */,
 				F0CE10E92A1F827000517EAB /* CreatePasswordViewController.swift in Sources */,
@@ -851,7 +784,6 @@
 				F0DC65BC2A1BA33200341C08 /* LoginViewController.swift in Sources */,
 				F0DC65A62A1B945F00341C08 /* SplashViewModel.swift in Sources */,
 				F01A294E2A1E2C9900211F7C /* PasswordResetCoordinator.swift in Sources */,
-				F0CE10CB2A1F4BF300517EAB /* CircularProgressView.swift in Sources */,
 				F0DC65C02A1BA66000341C08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

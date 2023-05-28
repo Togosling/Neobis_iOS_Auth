@@ -19,5 +19,4 @@ class Bindable<T> {
     func bind(observer: @escaping (T?) ->()) {
         self.observer = observer
     }
-    
 }

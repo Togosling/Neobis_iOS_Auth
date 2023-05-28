@@ -11,7 +11,7 @@ class LoginViewController: BaseViewController {
     
     fileprivate let loginViewModel: LoginViewModelType
     fileprivate let loginView = LoginView()
-    fileprivate let passwordResetSuccesfullyView = PasswordResetSuccesfullyView()
+    fileprivate let passwordResetSuccesfullyView = PasswordResetSuccesfullyAllertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

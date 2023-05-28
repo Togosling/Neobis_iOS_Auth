@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PasswordResetSuccesfullyView: BaseView {
+class PasswordResetSuccesfullyAllertView: BaseView {
     
     let bellImageView: CustomImageView = {
         let iv = CustomImageView()

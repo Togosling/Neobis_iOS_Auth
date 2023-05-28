@@ -11,6 +11,7 @@ class RegisterViewController: BaseViewController {
     
     fileprivate let registerViewModel: RegisterViewModelType
     fileprivate let registerView = RegisterView()
+    fileprivate let sentEmailView = SentEmailAllertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class RegisterViewController: BaseViewController {
         registerView.backButton.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
         registerView.nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         registerView.mailTextField.addTarget(self, action: #selector(mailValidation), for: .editingChanged)
+        sentEmailView.closeButton.addTarget(self, action: #selector(handleClose), for: .touchUpInside)
     }
     
     @objc fileprivate func mailValidation() {
@@ -31,8 +33,26 @@ class RegisterViewController: BaseViewController {
         }
     }
     
+    @objc fileprivate func handleClose() {
+        view.subviews.forEach { subView in
+            if subView != registerView {
+                subView.removeFromSuperview()
+            }
+        }
+        registerViewModel.gotoDetails()
+    }
+    
     @objc fileprivate func handleNext() {
-        registerViewModel.gotoOTP()
+        registerViewModel.completeRegistration()
+        
+        view.applyBlurEffect()
+        sentEmailView.infoLabel.customInfoLabel(string: registerView.mailTextField.text ?? "")
+        view.addSubview(sentEmailView)
+        sentEmailView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(flexibleWidth(to: 343))
+            make.height.equalTo(flexibleHeight(to: 343))
+        }
     }
     
     @objc fileprivate func handleBack() {

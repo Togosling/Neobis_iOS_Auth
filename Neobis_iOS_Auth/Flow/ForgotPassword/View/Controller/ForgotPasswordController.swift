@@ -11,7 +11,7 @@ class ForgotPasswordController: BaseViewController {
     
     fileprivate let forgotPasswordViewModel: ForgotPasswordViewModelType
     fileprivate let forgotPasswordView = ForgotPasswordView()
-    fileprivate let sentEmailView = SentEmailView()
+    fileprivate let sentEmailView = SentEmailAllertView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

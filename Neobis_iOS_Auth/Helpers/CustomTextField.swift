@@ -28,16 +28,7 @@ class CustomTextField: UITextField {
         self.attributedPlaceholder = NSMutableAttributedString(string: string, attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.758, green: 0.758, blue: 0.758, alpha: 1)])
         self.layer.cornerRadius = 8
     }
-    
-    func customOTPTextField() {
-        self.textColor = .black
-        self.font = UIFont(name: "GothamPro-Black", size: 28)
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.27
-        self.attributedPlaceholder = NSMutableAttributedString(string: "0", attributes: [NSAttributedString.Key.kern: 0.36, NSAttributedString.Key.paragraphStyle: paragraphStyle, NSAttributedString.Key.foregroundColor: UIColor(red: 0.754, green: 0.754, blue: 0.754, alpha: 1)])
-        self.keyboardType = .numberPad
-    }
-        
+            
     //MARK: FloatingTextField
     func addPlaceHolder() {
         guard let placeholder = self.placeholder else {return}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SentEmailView: BaseView {
+class SentEmailAllertView: BaseView {
     
     let logoImageView: CustomImageView = {
         let iv = CustomImageView()
